@@ -70,9 +70,10 @@ def get_methodology(methodology_df, segment, cohort, mob, metric) -> dict
 def get_specificity_score(row, segment, cohort, metric, mob) -> float
 
 # 8. RATE CALCULATION FUNCTIONS
-def fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback) -> float
+def fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback, exclude_zeros) -> float
 def fn_cohort_trend(curves_df, segment, cohort, mob, metric_col) -> float
 def fn_donor_cohort(curves_df, segment, donor_cohort, mob, metric_col) -> float
+def fn_scaled_donor(curves_df, segment, cohort, donor_cohort, mob, metric_col, reference_mob) -> dict
 def fn_seg_median(curves_df, segment, mob, metric_col) -> float
 
 # 9. RATE APPLICATION
@@ -455,6 +456,25 @@ elif approach == 'DonorCohort':
     donor = str(param1).replace('.0', '')
     rate = fn_donor_cohort(curves_df, segment, donor, mob, metric_col)
     return {'Rate': rate, 'ApproachTag': f'DonorCohort:{donor}' if rate else f'DonorCohort_NoData_ERROR:{donor}'}
+elif approach == 'ScaledDonor':
+    # Copy curve SHAPE from donor, scaled to target's level
+    donor = str(param1).replace('.0', '')
+    result = fn_scaled_donor(curves_df, segment, cohort, donor, mob, metric_col, param2)
+    if result['success']:
+        return {'Rate': result['scaled_rate'], 'ApproachTag': f"ScaledDonor:{donor}(x{result['scale_factor']:.3f})"}
+    else:
+        # Fallback to regular DonorCohort
+        rate = fn_donor_cohort(curves_df, segment, donor, mob, metric_col)
+        return {'Rate': rate or 0, 'ApproachTag': f'ScaledDonor_FallbackDonor:{donor}' if rate else f'ScaledDonor_NoData_ERROR:{donor}'}
+elif approach == 'ScaledCohortAvg':
+    # CohortAvg with manual scaling factor (Param2)
+    lookback = int(float(param1)) if param1 else 6
+    scale_factor = float(param2) if param2 else 1.0
+    rate = fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback)
+    if rate:
+        return {'Rate': rate * scale_factor, 'ApproachTag': f'ScaledCohortAvg(x{scale_factor:.3f})'}
+    else:
+        return {'Rate': 0, 'ApproachTag': 'ScaledCohortAvg_NoData_ERROR'}
 else:
     return {'Rate': None, 'ApproachTag': f'UnknownApproach_ERROR:{approach}'}
 ```
@@ -465,15 +485,23 @@ else:
 
 #### apply_rate_cap(rate, metric, approach) -> float
 
-**Purpose:** Cap rates to reasonable ranges
+**Purpose:** Cap rates to reasonable ranges (wide sanity checks)
 
 **Processing:**
 1. If rate is None: return 0
-2. If 'ERROR' in approach or approach == 'Manual': return rate (no cap)
+2. If 'Manual' in approach or 'ERROR' in approach: return rate (no cap)
 3. If metric in Config.RATE_CAPS:
    - min_cap, max_cap = Config.RATE_CAPS[metric]
    - return max(min_cap, min(max_cap, rate))
 4. Else: return rate
+
+**Current Rate Caps:**
+- Coll_Principal: (-0.50, 0.15)
+- Coll_Interest: (-0.20, 0.05)
+- InterestRevenue: (0.0, 0.50)
+- WO_DebtSold: (0.0, 0.20)
+- WO_Other: (0.0, 0.05)
+- Total_Coverage_Ratio: (0.0, 2.50)
 
 ---
 
@@ -521,8 +549,9 @@ else:
    ```
 6. Calculate ClosingNBV:
    ```
-   ClosingNBV = ClosingGBV - Net_Impairment
+   ClosingNBV = ClosingGBV - Total_Provision_Balance  # NBV = GBV - Provision
    ```
+   **Note:** NBV is calculated from the cumulative provision balance, NOT Net_Impairment (which is the period charge/release).
 7. Prepare output row with all columns
 8. Prepare next_seed:
    ```

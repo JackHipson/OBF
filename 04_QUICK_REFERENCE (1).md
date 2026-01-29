@@ -44,8 +44,9 @@ Net_Impairment = Gross_Impairment_ExcludingDS + Debt_Sale_Impact
 
 ### Closing NBV
 ```
-ClosingNBV = ClosingGBV - Net_Impairment
+ClosingNBV = ClosingGBV - Total_Provision_Balance
 ```
+**Note:** NBV = GBV - Provision Balance (cumulative), NOT GBV - Net_Impairment (period charge)
 
 ---
 
@@ -55,10 +56,14 @@ ClosingNBV = ClosingGBV - Net_Impairment
 |----------|---------|------------|
 | **CohortAvg** | Average(Rate[MOB-N:MOB-1] where MOB > 3) | Stable, recent trends |
 | **CohortTrend** | a + b×MOB (linear regression) | Trending data |
-| **DonorCohort** | Rate from donor cohort at same MOB | New cohorts |
+| **DonorCohort** | Rate from donor cohort at same MOB | New cohorts (exact copy) |
+| **ScaledDonor** | Donor rate × scale factor | New cohorts (shape-adjusted) |
 | **SegMedian** | Median(Rate[all cohorts] at MOB) | Cross-cohort average |
 | **Manual** | Fixed rate (Param1) | Overrides, assumptions |
 | **Zero** | 0 | No activity |
+| **ScaledCohortAvg** | CohortAvg × scale factor (Param2) | Adjusted averages |
+
+**Note:** CohortAvg and CohortTrend automatically fall back to SegMedian when insufficient data.
 
 ---
 
@@ -66,13 +71,43 @@ ClosingNBV = ClosingGBV - Net_Impairment
 
 | Metric | Min | Max |
 |--------|-----|-----|
-| Coll_Principal | -0.15 | 0 |
-| Coll_Interest | -0.10 | 0 |
-| InterestRevenue | 0.10 | 0.50 |
-| WO_DebtSold | 0 | 0.12 |
-| WO_Other | 0 | 0.01 |
-| Total_Coverage_Ratio | 0.05 | 0.50 |
+| Coll_Principal | -0.50 | 0.15 |
+| Coll_Interest | -0.20 | 0.05 |
+| InterestRevenue | 0.0 | 0.50 |
+| WO_DebtSold | 0.0 | 0.20 |
+| WO_Other | 0.0 | 0.05 |
+| ContraSettlements_Principal | -0.15 | 0.01 |
+| ContraSettlements_Interest | -0.01 | 0.01 |
+| NewLoanAmount | 0.0 | 1.0 |
+| Total_Coverage_Ratio | 0.0 | 2.50 |
 | Debt_Sale_Coverage_Ratio | 0.50 | 1.00 |
+| Debt_Sale_Proceeds_Rate | 0.10 | 1.00 |
+
+**Note:** These are wide sanity checks; Manual overrides bypass caps.
+
+---
+
+## Debt Sale Configuration
+
+- **DS_COVERAGE_RATIO**: 78.5% (provisions covering debt sale pool)
+- **DS_PROCEEDS_RATE**: 24p per £1 of GBV sold
+- **DS_MONTHS**: March, June, September, December (quarterly)
+
+**Note:** WO_DebtSold only occurs in debt sale months; forced to 0 in other months.
+
+---
+
+## Seasonality & Overlays
+
+**Seasonality** (enabled by default):
+- Historical coverage ratios analyzed by calendar month
+- Seasonal factors applied: `Final_CR = Base_CR × Seasonal_Factor`
+- Output columns: `Total_Coverage_Ratio_Base`, `Seasonal_Factor`, `Total_Coverage_Ratio`
+
+**Overlays** (enabled by default):
+- Manual adjustments to output metrics after calculations
+- Types: Multiply, Add, Replace
+- Load from: `sample_data/Overlays.csv`
 
 ---
 
@@ -165,13 +200,15 @@ Example:
 ## Validation Checks
 
 ```
-✓ GBV Reconciliation: ClosingGBV = OpeningGBV + InterestRevenue - Collections - WriteOffs
-✓ NBV Reconciliation: ClosingNBV = ClosingGBV - Net_Impairment
+✓ GBV Reconciliation: ClosingGBV = OpeningGBV + InterestRevenue - abs(Collections) + WO (negative stored)
+✓ NBV Reconciliation: ClosingNBV = ClosingGBV - Total_Provision_Balance
 ✓ No NaN or Infinite Values
 ✓ Forecast Chain Continuity: ClosingGBV[t] = OpeningGBV[t+1]
-✓ Coverage Ratios in Range: [0.05, 0.50]
+✓ Coverage Ratios in Range: [0.0, 2.50]
 ✓ Rates Within Caps
 ```
+
+**Note:** Write-offs are stored as NEGATIVE values (P&L convention), so GBV reconciliation adds them.
 
 ---
 
@@ -197,7 +234,9 @@ python backbook_forecast.py \
 5. **Forecast Chain:** Ensure ClosingGBV[t] = OpeningGBV[t+1]
 6. **Rate Caps:** Apply caps AFTER rate calculation, BEFORE amount calculation
 7. **Impairment:** Track provision balance separately from GBV
-8. **Debt Sales:** Only apply debt sale logic in sale months
+8. **Debt Sales:** Only occur in Mar/Jun/Sep/Dec; WO_DebtSold=0 in other months
+9. **Sign Convention:** WO_DebtSold and WO_Other are stored as NEGATIVE (expense)
+10. **NBV Formula:** Use ClosingGBV - Provision_Balance, NOT ClosingGBV - Net_Impairment
 
 ---
 
@@ -292,7 +331,7 @@ if missing_cols:
 - [ ] NBV reconciliation passes
 - [ ] No NaN or infinite values
 - [ ] Forecast chain continuous
-- [ ] Coverage ratios in range
+- [ ] Coverage ratios in range [0.0, 2.50]
 - [ ] Excel files generated
 - [ ] All sheets populated
 - [ ] Validation report shows all checks passed
