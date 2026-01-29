@@ -80,8 +80,8 @@ class Config:
 
     # Valid rate calculation approaches
     VALID_APPROACHES: List[str] = [
-        'CohortAvg', 'CohortTrend', 'DonorCohort', 'ScaledDonor',
-        'SegMedian', 'Manual', 'Zero', 'ScaledCohortAvg'
+        'CohortAvg', 'CohortTrend', 'DonorCohort',
+        'SegMedian', 'Manual', 'Zero'
     ]
 
     # Seasonality configuration
@@ -1668,160 +1668,6 @@ def fn_donor_cohort(curves_df: pd.DataFrame, segment: str, donor_cohort: str,
     return float(rate)
 
 
-def fn_scaled_donor(curves_df: pd.DataFrame, segment: str, cohort: str,
-                    donor_cohort: str, mob: int, metric_col: str,
-                    reference_mob: int = 6) -> Dict[str, Any]:
-    """
-    Copy curve SHAPE from donor cohort, scaled to target cohort's level.
-
-    Unlike DonorCohort which copies exact rates, ScaledDonor:
-    1. Calculates a scale factor from the target vs donor at a reference MOB
-    2. Applies that scale factor to the donor's rate at the forecast MOB
-
-    This preserves the shape/trajectory of the donor curve while adjusting
-    for the different level of the target cohort.
-
-    Scale Factor = Target CR at reference MOB / Donor CR at reference MOB
-    Forecast = Donor CR at forecast MOB × Scale Factor
-
-    Args:
-        curves_df: Curves DataFrame
-        segment: Target segment
-        cohort: Target cohort YYYYMM
-        donor_cohort: Donor cohort YYYYMM
-        mob: Target MOB to forecast
-        metric_col: Column name for metric rate
-        reference_mob: MOB to calculate scale factor from (default: 6)
-
-    Returns:
-        dict: Full traceability with all intermediate values:
-            - scaled_rate: Final calculated rate (or None if failed)
-            - scale_factor: The multiplier applied
-            - reference_mob: The MOB used for scale calculation
-            - target_cr_at_ref: Target's CR at reference MOB
-            - donor_cr_at_ref: Donor's CR at reference MOB
-            - donor_cr_at_forecast: Donor's CR at forecast MOB
-            - success: True if calculation succeeded
-            - error: Error message if failed
-    """
-    cohort_str = clean_cohort(cohort)
-    donor_cohort_str = clean_cohort(donor_cohort)
-
-    result = {
-        'scaled_rate': None,
-        'scale_factor': None,
-        'reference_mob': None,
-        'target_cr_at_ref': None,
-        'donor_cr_at_ref': None,
-        'donor_cr_at_forecast': None,
-        'success': False,
-        'error': None
-    }
-
-    # Step 1: Find the latest MOB where both target and donor have data
-    # This becomes our reference point for calculating the scale factor
-    target_mask = (
-        (curves_df['Segment'] == segment) &
-        (curves_df['Cohort'] == cohort_str) &
-        (curves_df['MOB'] >= Config.MOB_THRESHOLD)
-    )
-    target_data = curves_df[target_mask].copy()
-
-    if len(target_data) == 0 or metric_col not in target_data.columns:
-        result['error'] = f"No target data for {segment}/{cohort_str}"
-        return result
-
-    # Get max MOB for target cohort (this is our actual data boundary)
-    target_max_mob = target_data['MOB'].max()
-
-    # Use the max available MOB as reference (or specified reference_mob if available)
-    actual_reference_mob = min(target_max_mob, reference_mob) if reference_mob else target_max_mob
-    result['reference_mob'] = actual_reference_mob
-
-    # Get target's rate at reference MOB
-    target_ref_mask = (
-        (curves_df['Segment'] == segment) &
-        (curves_df['Cohort'] == cohort_str) &
-        (curves_df['MOB'] == actual_reference_mob)
-    )
-    target_ref_data = curves_df[target_ref_mask]
-
-    if len(target_ref_data) == 0:
-        # Try to find closest available MOB
-        valid_mobs = target_data['MOB'].unique()
-        if len(valid_mobs) == 0:
-            result['error'] = f"No valid MOBs for target {cohort_str}"
-            return result
-        actual_reference_mob = max(valid_mobs)
-        result['reference_mob'] = actual_reference_mob
-        target_ref_mask = (
-            (curves_df['Segment'] == segment) &
-            (curves_df['Cohort'] == cohort_str) &
-            (curves_df['MOB'] == actual_reference_mob)
-        )
-        target_ref_data = curves_df[target_ref_mask]
-
-    if len(target_ref_data) == 0:
-        result['error'] = f"No target data at MOB {actual_reference_mob}"
-        return result
-
-    target_rate_at_ref = target_ref_data[metric_col].iloc[0]
-    result['target_cr_at_ref'] = target_rate_at_ref
-
-    if pd.isna(target_rate_at_ref) or target_rate_at_ref == 0:
-        result['error'] = f"Target CR at ref MOB is 0 or NaN"
-        return result
-
-    # Step 2: Get donor's rate at the same reference MOB
-    donor_ref_mask = (
-        (curves_df['Segment'] == segment) &
-        (curves_df['Cohort'] == donor_cohort_str) &
-        (curves_df['MOB'] == actual_reference_mob)
-    )
-    donor_ref_data = curves_df[donor_ref_mask]
-
-    if len(donor_ref_data) == 0 or metric_col not in donor_ref_data.columns:
-        result['error'] = f"No donor data at ref MOB {actual_reference_mob}"
-        return result
-
-    donor_rate_at_ref = donor_ref_data[metric_col].iloc[0]
-    result['donor_cr_at_ref'] = donor_rate_at_ref
-
-    if pd.isna(donor_rate_at_ref) or donor_rate_at_ref == 0:
-        result['error'] = f"Donor CR at ref MOB is 0 or NaN"
-        return result
-
-    # Step 3: Calculate scale factor
-    scale_factor = target_rate_at_ref / donor_rate_at_ref
-    result['scale_factor'] = scale_factor
-
-    # Step 4: Get donor's rate at the forecast MOB
-    donor_forecast_mask = (
-        (curves_df['Segment'] == segment) &
-        (curves_df['Cohort'] == donor_cohort_str) &
-        (curves_df['MOB'] == mob)
-    )
-    donor_forecast_data = curves_df[donor_forecast_mask]
-
-    if len(donor_forecast_data) == 0:
-        result['error'] = f"No donor data at forecast MOB {mob}"
-        return result
-
-    donor_rate_at_forecast = donor_forecast_data[metric_col].iloc[0]
-    result['donor_cr_at_forecast'] = donor_rate_at_forecast
-
-    if pd.isna(donor_rate_at_forecast):
-        result['error'] = f"Donor CR at forecast MOB is NaN"
-        return result
-
-    # Step 5: Apply scale factor to get scaled forecast
-    scaled_rate = donor_rate_at_forecast * scale_factor
-    result['scaled_rate'] = float(scaled_rate)
-    result['success'] = True
-
-    return result
-
-
 def fn_seg_median(curves_df: pd.DataFrame, segment: str, mob: int,
                   metric_col: str) -> Optional[float]:
     """
@@ -1955,85 +1801,6 @@ def apply_approach(curves_df: pd.DataFrame, segment: str, cohort: str,
             return {'Rate': rate, 'ApproachTag': f'DonorCohort:{donor}'}
         else:
             return {'Rate': 0.0, 'ApproachTag': f'DonorCohort_NoData_ERROR:{donor}'}
-
-    elif approach == 'ScaledDonor':
-        # ScaledDonor copies the SHAPE of the donor curve, not the exact rates
-        # Param1 = donor cohort, Param2 = reference MOB (optional, defaults to latest available)
-        if param1 is None or param1 == 'None':
-            return {'Rate': 0.0, 'ApproachTag': 'ScaledDonor_NoParam_ERROR'}
-
-        donor = clean_cohort(param1)
-        param2 = methodology.get('Param2')
-
-        # Parse reference MOB from Param2 if provided
-        reference_mob = None
-        if param2 and param2 != 'None' and param2 != 'nan':
-            try:
-                reference_mob = int(float(param2))
-            except (ValueError, TypeError):
-                reference_mob = None
-
-        # Get scaled rate with full traceability
-        sd_result = fn_scaled_donor(
-            curves_df, segment, cohort, donor, mob, metric_col, reference_mob
-        )
-
-        if sd_result['success']:
-            # Include full traceability in result
-            return {
-                'Rate': sd_result['scaled_rate'],
-                'ApproachTag': f"ScaledDonor:{donor}(x{sd_result['scale_factor']:.3f})",
-                # Traceability columns
-                'ScaledDonor_Donor': donor,
-                'ScaledDonor_RefMOB': sd_result['reference_mob'],
-                'ScaledDonor_TargetCR_AtRef': sd_result['target_cr_at_ref'],
-                'ScaledDonor_DonorCR_AtRef': sd_result['donor_cr_at_ref'],
-                'ScaledDonor_ScaleFactor': sd_result['scale_factor'],
-                'ScaledDonor_DonorCR_AtForecast': sd_result['donor_cr_at_forecast'],
-                'ScaledDonor_FinalRate': sd_result['scaled_rate'],
-            }
-        else:
-            # Fallback to regular DonorCohort if ScaledDonor fails
-            rate = fn_donor_cohort(curves_df, segment, donor, mob, metric_col)
-            if rate is not None:
-                return {
-                    'Rate': rate,
-                    'ApproachTag': f'ScaledDonor_FallbackDonor:{donor}',
-                    'ScaledDonor_Error': sd_result.get('error', 'Unknown error'),
-                    'ScaledDonor_FallbackRate': rate,
-                }
-            else:
-                return {
-                    'Rate': 0.0,
-                    'ApproachTag': f'ScaledDonor_NoData_ERROR:{donor}',
-                    'ScaledDonor_Error': sd_result.get('error', 'Unknown error'),
-                }
-
-    elif approach == 'ScaledCohortAvg':
-        # ScaledCohortAvg: Same as CohortAvg but applies a scaling factor from Param2
-        # Param1 = lookback periods (same as CohortAvg)
-        # Param2 = scaling factor (e.g., 1.1 = +10%, 0.9 = -10%)
-        try:
-            lookback = int(float(param1)) if param1 and param1 != 'None' else Config.LOOKBACK_PERIODS
-        except (ValueError, TypeError):
-            lookback = Config.LOOKBACK_PERIODS
-
-        # Get scale factor from Param2
-        param2 = methodology.get('Param2')
-        try:
-            scale_factor = float(param2) if param2 and param2 != 'None' and param2 != 'nan' else 1.0
-        except (ValueError, TypeError):
-            scale_factor = 1.0
-
-        exclude_zeros = metric in ['WO_DebtSold', 'Debt_Sale_Coverage_Ratio', 'Debt_Sale_Proceeds_Rate']
-        rate = fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback, exclude_zeros)
-
-        if rate is not None:
-            scaled_rate = rate * scale_factor
-            tag = f'ScaledCohortAvg(x{scale_factor:.3f})'
-            return {'Rate': scaled_rate, 'ApproachTag': tag}
-        else:
-            return {'Rate': 0.0, 'ApproachTag': 'ScaledCohortAvg_NoData_ERROR'}
 
     else:
         return {'Rate': 0.0, 'ApproachTag': f'UnknownApproach_ERROR:{approach}'}
@@ -2261,14 +2028,6 @@ def build_impairment_lookup(seed: pd.DataFrame, impairment_curves: pd.DataFrame,
             row['Total_Coverage_Ratio'] = final_rate
             row['Total_Coverage_Approach'] = approach_tag
 
-            # Copy ScaledDonor traceability columns if present
-            for key in ['ScaledDonor_Donor', 'ScaledDonor_RefMOB', 'ScaledDonor_TargetCR_AtRef',
-                        'ScaledDonor_DonorCR_AtRef', 'ScaledDonor_ScaleFactor',
-                        'ScaledDonor_DonorCR_AtForecast', 'ScaledDonor_FinalRate',
-                        'ScaledDonor_Error', 'ScaledDonor_FallbackRate']:
-                if key in result:
-                    row[key] = result[key]
-
             # Set defaults for debt sale ratios if not already set
             if 'Debt_Sale_Coverage_Ratio' not in row:
                 row['Debt_Sale_Coverage_Ratio'] = 0.85
@@ -2493,16 +2252,6 @@ def run_one_step(seed_table: pd.DataFrame, rate_lookup: pd.DataFrame,
             'Seasonal_Factor': round(imp_rates.get('Seasonal_Factor', 1.0), 4),
             'Total_Coverage_Ratio': round(total_coverage_ratio, 6),
             'Total_Coverage_Approach': imp_rates.get('Total_Coverage_Approach', ''),
-
-            # ScaledDonor traceability (only populated when ScaledDonor approach is used)
-            'ScaledDonor_Donor': imp_rates.get('ScaledDonor_Donor', ''),
-            'ScaledDonor_RefMOB': imp_rates.get('ScaledDonor_RefMOB', ''),
-            'ScaledDonor_TargetCR_AtRef': round(imp_rates.get('ScaledDonor_TargetCR_AtRef', 0), 6) if imp_rates.get('ScaledDonor_TargetCR_AtRef') else '',
-            'ScaledDonor_DonorCR_AtRef': round(imp_rates.get('ScaledDonor_DonorCR_AtRef', 0), 6) if imp_rates.get('ScaledDonor_DonorCR_AtRef') else '',
-            'ScaledDonor_ScaleFactor': round(imp_rates.get('ScaledDonor_ScaleFactor', 0), 4) if imp_rates.get('ScaledDonor_ScaleFactor') else '',
-            'ScaledDonor_DonorCR_AtForecast': round(imp_rates.get('ScaledDonor_DonorCR_AtForecast', 0), 6) if imp_rates.get('ScaledDonor_DonorCR_AtForecast') else '',
-            'ScaledDonor_FinalRate': round(imp_rates.get('ScaledDonor_FinalRate', 0), 6) if imp_rates.get('ScaledDonor_FinalRate') else '',
-            'ScaledDonor_Error': imp_rates.get('ScaledDonor_Error', ''),
 
             'Total_Provision_Balance': round(total_provision_balance, 2),
             'Prior_Provision_Balance': round(prior_provision, 2),

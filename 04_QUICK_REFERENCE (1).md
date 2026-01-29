@@ -56,12 +56,10 @@ ClosingNBV = ClosingGBV - Total_Provision_Balance
 |----------|---------|------------|
 | **CohortAvg** | Average(Rate[MOB-N:MOB-1] where MOB > 3) | Stable, recent trends |
 | **CohortTrend** | a + b×MOB (linear regression) | Trending data |
-| **DonorCohort** | Rate from donor cohort at same MOB | New cohorts (exact copy) |
-| **ScaledDonor** | Donor rate × scale factor | New cohorts (shape-adjusted) |
+| **DonorCohort** | Rate from donor cohort at same MOB | New cohorts |
 | **SegMedian** | Median(Rate[all cohorts] at MOB) | Cross-cohort average |
 | **Manual** | Fixed rate (Param1) | Overrides, assumptions |
 | **Zero** | 0 | No activity |
-| **ScaledCohortAvg** | CohortAvg × scale factor (Param2) | Adjusted averages |
 
 **Note:** CohortAvg and CohortTrend automatically fall back to SegMedian when insufficient data.
 

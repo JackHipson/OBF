@@ -73,7 +73,6 @@ def get_specificity_score(row, segment, cohort, metric, mob) -> float
 def fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback, exclude_zeros) -> float
 def fn_cohort_trend(curves_df, segment, cohort, mob, metric_col) -> float
 def fn_donor_cohort(curves_df, segment, donor_cohort, mob, metric_col) -> float
-def fn_scaled_donor(curves_df, segment, cohort, donor_cohort, mob, metric_col, reference_mob) -> dict
 def fn_seg_median(curves_df, segment, mob, metric_col) -> float
 
 # 9. RATE APPLICATION
@@ -456,25 +455,6 @@ elif approach == 'DonorCohort':
     donor = str(param1).replace('.0', '')
     rate = fn_donor_cohort(curves_df, segment, donor, mob, metric_col)
     return {'Rate': rate, 'ApproachTag': f'DonorCohort:{donor}' if rate else f'DonorCohort_NoData_ERROR:{donor}'}
-elif approach == 'ScaledDonor':
-    # Copy curve SHAPE from donor, scaled to target's level
-    donor = str(param1).replace('.0', '')
-    result = fn_scaled_donor(curves_df, segment, cohort, donor, mob, metric_col, param2)
-    if result['success']:
-        return {'Rate': result['scaled_rate'], 'ApproachTag': f"ScaledDonor:{donor}(x{result['scale_factor']:.3f})"}
-    else:
-        # Fallback to regular DonorCohort
-        rate = fn_donor_cohort(curves_df, segment, donor, mob, metric_col)
-        return {'Rate': rate or 0, 'ApproachTag': f'ScaledDonor_FallbackDonor:{donor}' if rate else f'ScaledDonor_NoData_ERROR:{donor}'}
-elif approach == 'ScaledCohortAvg':
-    # CohortAvg with manual scaling factor (Param2)
-    lookback = int(float(param1)) if param1 else 6
-    scale_factor = float(param2) if param2 else 1.0
-    rate = fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback)
-    if rate:
-        return {'Rate': rate * scale_factor, 'ApproachTag': f'ScaledCohortAvg(x{scale_factor:.3f})'}
-    else:
-        return {'Rate': 0, 'ApproachTag': 'ScaledCohortAvg_NoData_ERROR'}
 else:
     return {'Rate': None, 'ApproachTag': f'UnknownApproach_ERROR:{approach}'}
 ```

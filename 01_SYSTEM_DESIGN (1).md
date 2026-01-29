@@ -78,7 +78,7 @@ ContraSettlements_Interest = OpeningGBV × ContraSettlements_Interest_Rate
 **Rate Selection:**
 - Rates come from Rate_Methodology control table
 - Specificity scoring: Segment (+8) > Cohort (+4) > Metric (+2) > MOB range width (tiebreaker)
-- Approaches: CohortAvg, CohortTrend, DonorCohort, ScaledDonor, SegMedian, Manual, Zero, ScaledCohortAvg
+- Approaches: CohortAvg, CohortTrend, DonorCohort, SegMedian, Manual, Zero
 - Rate caps applied per metric (wide sanity check ranges)
 - CohortAvg and CohortTrend automatically fall back to SegMedian when insufficient data
 
@@ -313,22 +313,6 @@ ALL,202504,Debt_Sale_Coverage_Ratio,0,999,Manual,0.85,
 **Description:** Force rate to zero
 **Parameters:** None
 **Formula:** `Rate = 0`
-
-### 5.7 ScaledDonor
-**Description:** Copy curve SHAPE from donor cohort, scaled to target cohort's level
-**Parameters:** Param1 = donor cohort YYYYMM, Param2 = reference MOB (optional)
-**Formula:**
-```
-Scale_Factor = Target_CR_at_ref_MOB / Donor_CR_at_ref_MOB
-Rate = Donor_CR_at_forecast_MOB × Scale_Factor
-```
-**Notes:** Unlike DonorCohort which copies exact rates, ScaledDonor preserves the shape/trajectory while adjusting for different levels. Falls back to DonorCohort if scaling calculation fails.
-
-### 5.8 ScaledCohortAvg
-**Description:** Same as CohortAvg but applies a manual scaling factor
-**Parameters:** Param1 = lookback periods (default 6), Param2 = scaling factor (e.g., 1.1 = +10%)
-**Formula:** `Rate = CohortAvg_Rate × Scale_Factor`
-**Notes:** Useful for applying management overlays to CohortAvg rates.
 
 ---
 
@@ -568,8 +552,8 @@ class Config:
     ]
 
     VALID_APPROACHES = [
-        'CohortAvg', 'CohortTrend', 'DonorCohort', 'ScaledDonor',
-        'SegMedian', 'Manual', 'Zero', 'ScaledCohortAvg'
+        'CohortAvg', 'CohortTrend', 'DonorCohort',
+        'SegMedian', 'Manual', 'Zero'
     ]
 
     # Seasonality configuration

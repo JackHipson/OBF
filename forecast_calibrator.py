@@ -130,7 +130,6 @@ class Config:
         'CohortAvg',
         'CohortTrend',
         'DonorCohort',
-        'ScaledDonor',
         'SegMedian',
         'Manual',
         'Zero'
