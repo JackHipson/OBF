@@ -70,7 +70,7 @@ def get_methodology(methodology_df, segment, cohort, mob, metric) -> dict
 def get_specificity_score(row, segment, cohort, metric, mob) -> float
 
 # 8. RATE CALCULATION FUNCTIONS
-def fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback, exclude_zeros) -> float
+def fn_cohort_avg(curves_df, segment, cohort, mob, metric_col, lookback) -> float
 def fn_cohort_trend(curves_df, segment, cohort, mob, metric_col) -> float
 def fn_donor_cohort(curves_df, segment, donor_cohort, mob, metric_col) -> float
 def fn_seg_median(curves_df, segment, mob, metric_col) -> float
@@ -465,23 +465,15 @@ else:
 
 #### apply_rate_cap(rate, metric, approach) -> float
 
-**Purpose:** Cap rates to reasonable ranges (wide sanity checks)
+**Purpose:** Cap rates to reasonable ranges
 
 **Processing:**
 1. If rate is None: return 0
-2. If 'Manual' in approach or 'ERROR' in approach: return rate (no cap)
+2. If 'ERROR' in approach or approach == 'Manual': return rate (no cap)
 3. If metric in Config.RATE_CAPS:
    - min_cap, max_cap = Config.RATE_CAPS[metric]
    - return max(min_cap, min(max_cap, rate))
 4. Else: return rate
-
-**Current Rate Caps:**
-- Coll_Principal: (-0.50, 0.15)
-- Coll_Interest: (-0.20, 0.05)
-- InterestRevenue: (0.0, 0.50)
-- WO_DebtSold: (0.0, 0.20)
-- WO_Other: (0.0, 0.05)
-- Total_Coverage_Ratio: (0.0, 2.50)
 
 ---
 
@@ -529,9 +521,8 @@ else:
    ```
 6. Calculate ClosingNBV:
    ```
-   ClosingNBV = ClosingGBV - Total_Provision_Balance  # NBV = GBV - Provision
+   ClosingNBV = ClosingGBV - Net_Impairment
    ```
-   **Note:** NBV is calculated from the cumulative provision balance, NOT Net_Impairment (which is the period charge/release).
 7. Prepare output row with all columns
 8. Prepare next_seed:
    ```

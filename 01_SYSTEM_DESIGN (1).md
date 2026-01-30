@@ -79,8 +79,7 @@ ContraSettlements_Interest = OpeningGBV × ContraSettlements_Interest_Rate
 - Rates come from Rate_Methodology control table
 - Specificity scoring: Segment (+8) > Cohort (+4) > Metric (+2) > MOB range width (tiebreaker)
 - Approaches: CohortAvg, CohortTrend, DonorCohort, SegMedian, Manual, Zero
-- Rate caps applied per metric (wide sanity check ranges)
-- CohortAvg and CohortTrend automatically fall back to SegMedian when insufficient data
+- Rate caps applied per metric (e.g., Coll_Principal: -15% to 0%)
 
 ### 2.2 Closing GBV Calculation
 
@@ -96,18 +95,9 @@ ClosingGBV = OpeningGBV
 
 **Notes:**
 - InterestRevenue is positive (increases GBV)
-- Collections and write-offs reduce GBV (amounts are absolute values in the formula)
+- Collections and write-offs are negative (reduce GBV)
 - Contra settlements are tracked separately (not in GBV formula)
 - NewLoanAmount is tracked separately (not in GBV formula)
-
-**Sign Convention (P&L Reporting):**
-The model uses P&L sign convention for stored values:
-- Write-offs (WO_DebtSold, WO_Other): **NEGATIVE** (expense/loss)
-- DS_Provision_Release: **POSITIVE** (income/benefit)
-- DS_Proceeds: **POSITIVE** (income/benefit)
-- Net Impairment: **NEGATIVE** = charge, **POSITIVE** = benefit
-
-In the GBV formula above, `abs()` is applied to collections/write-offs before subtraction.
 
 ### 2.3 Impairment & Provision Calculations
 
@@ -175,14 +165,13 @@ Forecast_Net_Impairment = Forecast_Gross_Impairment_ExcludingDS + Forecast_Debt_
 
 **Formula:**
 ```
-ClosingNBV = ClosingGBV - Total_Provision_Balance
+ClosingNBV = ClosingGBV - Net_Impairment
 ```
 
 **Notes:**
-- NBV is calculated by subtracting the cumulative provision balance from GBV
-- Total_Provision_Balance = ClosingGBV × Total_Coverage_Ratio
-- NBV represents the net book value after accounting for expected credit losses
-- This differs from Net_Impairment, which is the P&L charge/release for the period
+- Net_Impairment is the total impairment charge for the month
+- Can be positive (provision increase) or negative (provision release)
+- NBV represents the book value after accounting for expected losses
 
 ---
 
@@ -318,102 +307,23 @@ ALL,202504,Debt_Sale_Coverage_Ratio,0,999,Manual,0.85,
 
 ## 6. Rate Caps
 
-Rates are capped to prevent unrealistic forecasts. These caps are wide sanity checks to accommodate data variance:
+Rates are capped to prevent unrealistic forecasts:
 
 | Metric | Min | Max | Notes |
 |--------|-----|-----|-------|
-| Coll_Principal | -0.50 | 0.15 | Usually negative (collections), some positive variance |
-| Coll_Interest | -0.20 | 0.05 | Usually negative (collections), some positive variance |
-| InterestRevenue | 0.0 | 0.50 | Always positive, annualized rate |
-| WO_DebtSold | 0.0 | 0.20 | Always positive, write-offs reduce GBV |
-| WO_Other | 0.0 | 0.05 | Always positive, other write-offs reduce GBV |
-| ContraSettlements_Principal | -0.15 | 0.01 | Usually negative |
-| ContraSettlements_Interest | -0.01 | 0.01 | Usually negative |
-| NewLoanAmount | 0.0 | 1.0 | Always positive |
-| Total_Coverage_Ratio | 0.0 | 2.50 | Allow up to 250% coverage for IFRS 9 uplifts |
+| Coll_Principal | -0.15 | 0 | Collections reduce GBV |
+| Coll_Interest | -0.10 | 0 | Interest collections reduce GBV |
+| InterestRevenue | 0.10 | 0.50 | Annualized rate |
+| WO_DebtSold | 0 | 0.12 | Write-offs reduce GBV |
+| WO_Other | 0 | 0.01 | Other write-offs reduce GBV |
+| ContraSettlements_Principal | -0.06 | 0 | Contra settlements |
+| ContraSettlements_Interest | -0.005 | 0 | Contra settlements |
+| NewLoanAmount | 0 | 1.0 | New originations |
+| Total_Coverage_Ratio | 0.05 | 0.50 | Provision as % of GBV |
 | Debt_Sale_Coverage_Ratio | 0.50 | 1.00 | Provision on debt sales |
-| Debt_Sale_Proceeds_Rate | 0.10 | 1.00 | Proceeds as % of write-offs |
+| Debt_Sale_Proceeds_Rate | 0.30 | 1.00 | Proceeds as % of write-offs |
 
 **Note:** Manual overrides bypass rate caps.
-
----
-
-## 6B. Debt Sale Configuration
-
-Debt sales are configured with the following parameters:
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| DS_COVERAGE_RATIO | 0.785 (78.5%) | Percentage of provisions covering debt sale pool |
-| DS_PROCEEDS_RATE | 0.24 (24p/£1) | Proceeds received per £1 of GBV sold |
-| DS_MONTHS | [3, 6, 9, 12] | Calendar months when debt sales occur (quarterly) |
-
-**Notes:**
-- Debt sale write-offs (WO_DebtSold) only occur in March, June, September, December
-- In non-debt-sale months, WO_DebtSold is forced to zero regardless of the rate
-- DS_Coverage_Ratio and DS_Proceeds_Rate are applied to calculate provision release and proceeds
-
----
-
-## 6C. Seasonality Adjustment
-
-The model supports seasonal adjustment for coverage ratios:
-
-**Configuration:**
-- `ENABLE_SEASONALITY` (default: True) - Enable/disable seasonal adjustment
-- `SEASONALITY_METRIC` (default: 'Total_Coverage_Ratio')
-
-**How it works:**
-1. Historical coverage ratios are analyzed by calendar month and segment
-2. Seasonal factors are calculated as: `factor = month_avg_CR / segment_avg_CR`
-3. Base forecast rates are re-seasonalized: `Seasonalized_CR = Base_CR × Seasonal_Factor`
-
-**Output columns:**
-- `Total_Coverage_Ratio_Base` - The base (de-seasonalized) coverage ratio
-- `Seasonal_Factor` - The multiplier applied for that forecast month
-- `Total_Coverage_Ratio` - Final seasonalized coverage ratio
-
----
-
-## 6D. Overlay Configuration
-
-Overlays allow manual adjustments to forecasted OUTPUT METRICS after all calculations are complete:
-
-**Configuration:**
-- `ENABLE_OVERLAYS` (default: True)
-- `OVERLAY_FILE` (default: 'sample_data/Overlays.csv')
-
-**Overlay CSV format:**
-```
-Segment,ForecastMonth_Start,ForecastMonth_End,Metric,Type,Value,Explanation
-```
-
-**Overlay Types:**
-- `Multiply`: Amount × Value (e.g., 0.95 = -5%)
-- `Add`: Amount + Value (e.g., -1000000 = subtract £1m)
-- `Replace`: Use Value directly
-
-**Valid Overlay Metrics:**
-- Coll_Principal, Coll_Interest, InterestRevenue
-- WO_DebtSold, WO_Other
-- ClosingGBV, Total_Provision_Balance
-- Gross_Impairment_ExcludingDS, Debt_Sale_Impact, Net_Impairment
-- ClosingNBV
-
----
-
-## 6E. Cohort Clustering (Backbook Groupings)
-
-The model supports automatic cohort clustering for Backbook analysis:
-
-| Cohort Range | Clustered To | Backbook |
-|--------------|--------------|----------|
-| PRE-2020 | 201912 | Legacy |
-| 202001-202012 | 202001 | Backbook 4 |
-| 202101-202208 | 202101 | Backbook 3 |
-| 202209-202305 | 202201 | Backbook 2 |
-| 202306-202403 | 202301 | Backbook 1 |
-| 202404+ | Monthly | New Originations |
 
 ---
 
@@ -520,49 +430,15 @@ class Config:
     MAX_MONTHS = 12  # Forecast horizon
     LOOKBACK_PERIODS = 6  # Default for CohortAvg
     MOB_THRESHOLD = 3  # Minimum MOB for rate calculation
-
-    # Debt Sale Configuration
-    DS_COVERAGE_RATIO = 0.785  # 78.5% coverage on debt sale pool
-    DS_PROCEEDS_RATE = 0.24  # 24p per £1 of GBV sold
-    DS_MONTHS = [3, 6, 9, 12]  # Quarterly: March, June, September, December
-
-    # Rate caps - wide ranges to accommodate data variance
-    RATE_CAPS = {
-        'Coll_Principal': (-0.50, 0.15),
-        'Coll_Interest': (-0.20, 0.05),
-        'InterestRevenue': (0.0, 0.50),
-        'WO_DebtSold': (0.0, 0.20),
-        'WO_Other': (0.0, 0.05),
-        'ContraSettlements_Principal': (-0.15, 0.01),
-        'ContraSettlements_Interest': (-0.01, 0.01),
-        'NewLoanAmount': (0.0, 1.0),
-        'Total_Coverage_Ratio': (0.0, 2.50),  # Allow up to 250% coverage
-        'Debt_Sale_Coverage_Ratio': (0.50, 1.00),
-        'Debt_Sale_Proceeds_Rate': (0.10, 1.00),
-    }
-
+    RATE_CAPS = {...}  # Per-metric caps
     SEGMENTS = ['NON PRIME', 'NRP-S', 'NRP-M', 'NRP-L', 'PRIME']
-
     METRICS = [
         'Coll_Principal', 'Coll_Interest', 'InterestRevenue',
         'WO_DebtSold', 'WO_Other', 'ContraSettlements_Principal',
         'ContraSettlements_Interest', 'NewLoanAmount',
         'Total_Coverage_Ratio', 'Debt_Sale_Coverage_Ratio',
-        'Debt_Sale_Proceeds_Rate'
+        'Debt_Sale_Proceeds_Rate', 'WO_Other'
     ]
-
-    VALID_APPROACHES = [
-        'CohortAvg', 'CohortTrend', 'DonorCohort',
-        'SegMedian', 'Manual', 'Zero'
-    ]
-
-    # Seasonality configuration
-    ENABLE_SEASONALITY = True
-    SEASONALITY_METRIC = 'Total_Coverage_Ratio'
-
-    # Overlay configuration
-    ENABLE_OVERLAYS = True
-    OVERLAY_FILE = 'sample_data/Overlays.csv'
 ```
 
 ---

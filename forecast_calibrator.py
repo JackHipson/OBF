@@ -130,6 +130,7 @@ class Config:
         'CohortAvg',
         'CohortTrend',
         'DonorCohort',
+        'ScaledDonor',
         'SegMedian',
         'Manual',
         'Zero'
@@ -715,7 +716,8 @@ class ForecastRunner:
             '--fact-raw', self.fact_raw_file,
             '--methodology', methodology_file,
             '--months', str(months),
-            '--output', output_dir
+            '--output', output_dir,
+            '--transparency-report'  # Required to generate Forecast_Transparency_Report.xlsx
         ]
 
         try:
