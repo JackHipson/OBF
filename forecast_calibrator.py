@@ -711,12 +711,16 @@ class ForecastRunner:
         """
         logger.info(f"Running forecast with methodology: {methodology_file}")
 
+        # Use 'python' for Windows compatibility, 'python3' for Linux/Mac
+        python_cmd = 'python' if os.name == 'nt' else 'python3'
+
         cmd = [
-            'python3', self.forecast_script,
+            python_cmd, self.forecast_script,
             '--fact-raw', self.fact_raw_file,
             '--methodology', methodology_file,
             '--months', str(months),
-            '--output', output_dir
+            '--output', output_dir,
+            '--transparency-report'  # Required to generate Forecast_Transparency_Report.xlsx
         ]
 
         try:
