@@ -1,0 +1,20 @@
+Segment,ForecastMonth_Start,ForecastMonth_End,Metric,Type,Value,Explanation
+# Overlay file to close forecast vs budget variances
+# Based on v3 baseline variance analysis
+#
+# COLLECTIONS ADJUSTMENTS (to close -£1.45M/month gap)
+# Non Prime: -£1.04M variance -> reduce collections by 11% (forecast is over-collecting vs budget)
+NON PRIME,2025-10-01,2026-12-31,Coll_Principal,Multiply,0.89,Align Non Prime collections to budget (-11%)
+# Near Prime Small: +£0.44M variance -> increase collections (forecast under-collecting vs budget shown as positive P&L)
+NRP-S,2025-10-01,2026-12-31,Coll_Principal,Multiply,1.19,Align NRP-S collections to budget (+19%)
+# Near Prime Medium: -£0.77M variance -> reduce collections
+NRP-M,2025-10-01,2026-12-31,Coll_Principal,Multiply,0.85,Align NRP-M collections to budget (-15%)
+# Prime: -£0.16M variance -> reduce collections
+PRIME,2025-10-01,2026-12-31,Coll_Principal,Multiply,0.60,Align Prime collections to budget (-40%)
+#
+# IMPAIRMENT ADJUSTMENTS (to close +£1.56M/month over-forecast)
+# Reduce Total_Provision_Balance to lower gross impairment
+NON PRIME,2025-10-01,2026-12-31,Total_Provision_Balance,Multiply,0.95,Reduce Non Prime coverage ratio 5% to lower impairment
+NRP-S,2025-10-01,2026-12-31,Total_Provision_Balance,Multiply,0.97,Reduce NRP-S coverage ratio 3% to lower impairment
+NRP-M,2025-10-01,2026-12-31,Total_Provision_Balance,Multiply,0.95,Reduce NRP-M coverage ratio 5% to lower impairment
+PRIME,2025-10-01,2026-12-31,Total_Provision_Balance,Multiply,0.90,Reduce Prime coverage ratio 10% to lower impairment
