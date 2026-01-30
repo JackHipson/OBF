@@ -85,7 +85,7 @@ class Config:
     ]
 
     # Seasonality configuration
-    ENABLE_SEASONALITY: bool = True  # Enable seasonal adjustment for coverage ratios
+    ENABLE_SEASONALITY: bool = False  # Disabled - seasonality can be applied as overlay later
     SEASONALITY_METRIC: str = 'Total_Coverage_Ratio'  # Metric to apply seasonality to
 
     # Overlay configuration
