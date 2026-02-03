@@ -1,0 +1,325 @@
+Segment,Cohort,Metric,MOB_Start,MOB_End,Approach,Param1,Param2,Explanation
+NON PRIME,201912,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+NON PRIME,201912,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-S,201912,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-S,201912,Coll_Interest,,,Manual,-0.0040507218267277,,PQ rate (all MOBs)
+NON PRIME,202001,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+NON PRIME,202001,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-S,202001,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-S,202001,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NON PRIME,202101,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+NON PRIME,202101,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-M,202101,Coll_Principal,,,Manual,-0.07313923,,PQ rate (all MOBs)
+NRP-M,202101,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-S,202101,Coll_Principal,,,Manual,-0.07403968,,PQ rate (all MOBs)
+NRP-S,202101,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+PRIME,202101,Coll_Principal,,,Manual,-0.068605779,,PQ rate (all MOBs)
+PRIME,202101,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NON PRIME,202201,Coll_Principal,,,Manual,-0.094739375,,PQ rate (all MOBs)
+NON PRIME,202201,Coll_Interest,,,Manual,-0.0134868873405376,,PQ rate (all MOBs)
+NRP-M,202201,Coll_Principal,,,Manual,-0.071473967,,PQ rate (all MOBs)
+NRP-M,202201,Coll_Interest,,,Manual,-0.0121654534669089,,PQ rate (all MOBs)
+NRP-S,202201,Coll_Principal,,,Manual,-0.002,,PQ rate (all MOBs)
+NRP-S,202201,Coll_Interest,,,Manual,-0.0108309411161618,,PQ rate (all MOBs)
+PRIME,202201,Coll_Principal,,,Manual,-0.1100105139999999,,PQ rate (all MOBs)
+PRIME,202201,Coll_Interest,,,Manual,-0.0092890567286759,,PQ rate (all MOBs)
+NON PRIME,202301,Coll_Principal,,,Manual,-0.076308978,,PQ rate (all MOBs)
+NON PRIME,202301,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-L,202301,Coll_Principal,,,Manual,-0.03717244,,PQ rate (all MOBs)
+NRP-L,202301,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-M,202301,Coll_Principal,,,Manual,-0.038675193,,PQ rate (all MOBs)
+NRP-M,202301,Coll_Interest,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-S,202301,Coll_Principal,,,Manual,-0.061882725,,PQ rate (all MOBs)
+NRP-S,202301,Coll_Interest,,,Manual,-0.03,,PQ rate (all MOBs)
+NON PRIME,202404,Coll_Principal,,,Manual,-0.089870411,,PQ rate (all MOBs)
+NON PRIME,202404,Coll_Interest,,,Manual,-0.0221126585046885,,PQ rate (all MOBs)
+NRP-L,202404,Coll_Principal,,,Manual,-0.068010122,,PQ rate (all MOBs)
+NRP-L,202404,Coll_Interest,,,Manual,-0.0145936802790139,,PQ rate (all MOBs)
+NRP-M,202404,Coll_Principal,,,Manual,-0.045967313,,PQ rate (all MOBs)
+NRP-M,202404,Coll_Interest,,,Manual,-0.0144566692443808,,PQ rate (all MOBs)
+NRP-S,202404,Coll_Principal,,,Manual,-0.0477141361728248,,PQ rate (all MOBs)
+NRP-S,202404,Coll_Interest,,,Manual,-0.0162228741974261,,PQ rate (all MOBs)
+NON PRIME,202405,Coll_Principal,,,Manual,-0.059240555826335,,PQ rate (all MOBs)
+NON PRIME,202405,Coll_Interest,,,Manual,-0.0218258048672827,,PQ rate (all MOBs)
+NRP-L,202405,Coll_Principal,,,Manual,-0.0318561992740417,,PQ rate (all MOBs)
+NRP-L,202405,Coll_Interest,,,Manual,-0.012397363043349,,PQ rate (all MOBs)
+NRP-M,202405,Coll_Principal,,,Manual,-0.0261015663293081,,PQ rate (all MOBs)
+NRP-M,202405,Coll_Interest,,,Manual,-0.0147593739292793,,PQ rate (all MOBs)
+NRP-S,202405,Coll_Principal,,,Manual,-0.0510894117872631,,PQ rate (all MOBs)
+NRP-S,202405,Coll_Interest,,,Manual,-0.0168818381959919,,PQ rate (all MOBs)
+PRIME,202405,Coll_Principal,,,Manual,-0.0161468970215886,,PQ rate (all MOBs)
+PRIME,202405,Coll_Interest,,,Manual,-0.0100338701062972,,PQ rate (all MOBs)
+NON PRIME,202406,Coll_Principal,,,Manual,-0.064744089,,PQ rate (all MOBs)
+NON PRIME,202406,Coll_Interest,,,Manual,-0.0235959904279065,,PQ rate (all MOBs)
+NRP-L,202406,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+NRP-L,202406,Coll_Interest,,,Manual,-0.0154642796015158,,PQ rate (all MOBs)
+NRP-M,202406,Coll_Principal,,,Manual,-0.0304792749999999,,PQ rate (all MOBs)
+NRP-M,202406,Coll_Interest,,,Manual,-0.0139081462310784,,PQ rate (all MOBs)
+NRP-S,202406,Coll_Principal,,,Manual,-0.053663639,,PQ rate (all MOBs)
+NRP-S,202406,Coll_Interest,,,Manual,-0.0173966684972081,,PQ rate (all MOBs)
+NON PRIME,202407,Coll_Principal,,,Manual,-0.0605759820777358,,PQ rate (all MOBs)
+NON PRIME,202407,Coll_Interest,,,Manual,-0.0241774699660596,,PQ rate (all MOBs)
+NRP-L,202407,Coll_Principal,,,Manual,-0.0387882171953963,,PQ rate (all MOBs)
+NRP-L,202407,Coll_Interest,,,Manual,-0.0152155845964382,,PQ rate (all MOBs)
+NRP-M,202407,Coll_Principal,,,Manual,-0.026757402041689,,PQ rate (all MOBs)
+NRP-M,202407,Coll_Interest,,,Manual,-0.0146780180242543,,PQ rate (all MOBs)
+NRP-S,202407,Coll_Principal,,,Manual,-0.0583319141283677,,PQ rate (all MOBs)
+NRP-S,202407,Coll_Interest,,,Manual,-0.0174032928308847,,PQ rate (all MOBs)
+PRIME,202407,Coll_Principal,,,Manual,-0.0488573785631977,,PQ rate (all MOBs)
+PRIME,202407,Coll_Interest,,,Manual,-0.0103692547655264,,PQ rate (all MOBs)
+NON PRIME,202408,Coll_Principal,,,Manual,-0.06510046389549,,PQ rate (all MOBs)
+NON PRIME,202408,Coll_Interest,,,Manual,-0.0237176303548511,,PQ rate (all MOBs)
+NRP-L,202408,Coll_Principal,,,Manual,-0.029432438895651,,PQ rate (all MOBs)
+NRP-L,202408,Coll_Interest,,,Manual,-0.0156228574214977,,PQ rate (all MOBs)
+NRP-M,202408,Coll_Principal,,,Manual,-0.0279703591547974,,PQ rate (all MOBs)
+NRP-M,202408,Coll_Interest,,,Manual,-0.0154386000749691,,PQ rate (all MOBs)
+NRP-S,202408,Coll_Principal,,,Manual,-0.0470141234013974,,PQ rate (all MOBs)
+NRP-S,202408,Coll_Interest,,,Manual,-0.0179217919352677,,PQ rate (all MOBs)
+NON PRIME,202409,Coll_Principal,,,Manual,-0.0661108975829013,,PQ rate (all MOBs)
+NON PRIME,202409,Coll_Interest,,,Manual,-0.0248392360033074,,PQ rate (all MOBs)
+NRP-L,202409,Coll_Principal,,,Manual,-0.0229957307833932,,PQ rate (all MOBs)
+NRP-L,202409,Coll_Interest,,,Manual,-0.0153677135773377,,PQ rate (all MOBs)
+NRP-M,202409,Coll_Principal,,,Manual,-0.0323789479979797,,PQ rate (all MOBs)
+NRP-M,202409,Coll_Interest,,,Manual,-0.0156886327133017,,PQ rate (all MOBs)
+NRP-S,202409,Coll_Principal,,,Manual,-0.0566617934819267,,PQ rate (all MOBs)
+NRP-S,202409,Coll_Interest,,,Manual,-0.018357257061646,,PQ rate (all MOBs)
+PRIME,202409,Coll_Principal,,,Manual,-0.0401791422952742,,PQ rate (all MOBs)
+PRIME,202409,Coll_Interest,,,Manual,-0.0103929370555967,,PQ rate (all MOBs)
+NON PRIME,202410,Coll_Principal,,,Manual,-0.0615033757817206,,PQ rate (all MOBs)
+NON PRIME,202410,Coll_Interest,,,Manual,-0.0259049982759632,,PQ rate (all MOBs)
+NRP-L,202410,Coll_Principal,,,Manual,-0.0233117986160492,,PQ rate (all MOBs)
+NRP-L,202410,Coll_Interest,,,Manual,-0.0167413391103521,,PQ rate (all MOBs)
+NRP-M,202410,Coll_Principal,,,Manual,-0.0312573633505877,,PQ rate (all MOBs)
+NRP-M,202410,Coll_Interest,,,Manual,-0.0155864212222351,,PQ rate (all MOBs)
+NRP-S,202410,Coll_Principal,,,Manual,-0.0507771216107999,,PQ rate (all MOBs)
+NRP-S,202410,Coll_Interest,,,Manual,-0.0183930558287193,,PQ rate (all MOBs)
+NON PRIME,202411,Coll_Principal,,,Manual,-0.0635913373920916,,PQ rate (all MOBs)
+NON PRIME,202411,Coll_Interest,,,Manual,-0.0269728370462463,,PQ rate (all MOBs)
+NRP-L,202411,Coll_Principal,,,Manual,-0.0294358636079946,,PQ rate (all MOBs)
+NRP-L,202411,Coll_Interest,,,Manual,-0.015039281850903,,PQ rate (all MOBs)
+NRP-M,202411,Coll_Principal,,,Manual,-0.034583067231373,,PQ rate (all MOBs)
+NRP-M,202411,Coll_Interest,,,Manual,-0.0167138001764845,,PQ rate (all MOBs)
+NRP-S,202411,Coll_Principal,,,Manual,-0.0506603991798444,,PQ rate (all MOBs)
+NRP-S,202411,Coll_Interest,,,Manual,-0.0190532992694573,,PQ rate (all MOBs)
+NON PRIME,202412,Coll_Principal,,,Manual,-0.0623962802483266,,PQ rate (all MOBs)
+NON PRIME,202412,Coll_Interest,,,Manual,-0.0281856786823504,,PQ rate (all MOBs)
+NRP-L,202412,Coll_Principal,,,Manual,-0.008410335316075,,PQ rate (all MOBs)
+NRP-L,202412,Coll_Interest,,,Manual,-0.0107303733991535,,PQ rate (all MOBs)
+NRP-M,202412,Coll_Principal,,,Manual,-0.0257168261856155,,PQ rate (all MOBs)
+NRP-M,202412,Coll_Interest,,,Manual,-0.0159365300755033,,PQ rate (all MOBs)
+NRP-S,202412,Coll_Principal,,,Manual,-0.0524204056260163,,PQ rate (all MOBs)
+NRP-S,202412,Coll_Interest,,,Manual,-0.0191899707908634,,PQ rate (all MOBs)
+NON PRIME,202501,Coll_Principal,,,Manual,-0.0596482944220343,,PQ rate (all MOBs)
+NON PRIME,202501,Coll_Interest,,,Manual,-0.0282106890808204,,PQ rate (all MOBs)
+NRP-L,202501,Coll_Principal,,,Manual,-0.014701118537952,,PQ rate (all MOBs)
+NRP-L,202501,Coll_Interest,,,Manual,-0.0176406351458872,,PQ rate (all MOBs)
+NRP-M,202501,Coll_Principal,,,Manual,-0.0283491923740414,,PQ rate (all MOBs)
+NRP-M,202501,Coll_Interest,,,Manual,-0.0168067357751077,,PQ rate (all MOBs)
+NRP-S,202501,Coll_Principal,,,Manual,-0.0488523344151629,,PQ rate (all MOBs)
+NRP-S,202501,Coll_Interest,,,Manual,-0.0196906857203175,,PQ rate (all MOBs)
+NON PRIME,202502,Coll_Principal,,,Manual,-0.0592373249155959,,PQ rate (all MOBs)
+NON PRIME,202502,Coll_Interest,,,Manual,-0.0287902112959047,,PQ rate (all MOBs)
+NRP-L,202502,Coll_Principal,,,Manual,-0.0126703039771972,,PQ rate (all MOBs)
+NRP-L,202502,Coll_Interest,,,Manual,-0.0180149150205798,,PQ rate (all MOBs)
+NRP-M,202502,Coll_Principal,,,Manual,-0.0327093081072161,,PQ rate (all MOBs)
+NRP-M,202502,Coll_Interest,,,Manual,-0.0166548201132412,,PQ rate (all MOBs)
+NRP-S,202502,Coll_Principal,,,Manual,-0.0508124511023973,,PQ rate (all MOBs)
+NRP-S,202502,Coll_Interest,,,Manual,-0.0180344353356807,,PQ rate (all MOBs)
+NON PRIME,202503,Coll_Principal,,,Manual,-0.0544267000953923,,PQ rate (all MOBs)
+NON PRIME,202503,Coll_Interest,,,Manual,-0.0349636886895272,,PQ rate (all MOBs)
+NRP-L,202503,Coll_Principal,,,Manual,-0.0098323304851828,,PQ rate (all MOBs)
+NRP-L,202503,Coll_Interest,,,Manual,-0.0121027532761556,,PQ rate (all MOBs)
+NRP-M,202503,Coll_Principal,,,Manual,-0.0233003166102253,,PQ rate (all MOBs)
+NRP-M,202503,Coll_Interest,,,Manual,-0.0173532694567335,,PQ rate (all MOBs)
+NRP-S,202503,Coll_Principal,,,Manual,-0.0483299931613689,,PQ rate (all MOBs)
+NRP-S,202503,Coll_Interest,,,Manual,-0.0221507741329285,,PQ rate (all MOBs)
+NON PRIME,202504,Coll_Principal,,,Manual,-0.053667037,,PQ rate (all MOBs)
+NON PRIME,202504,Coll_Interest,,,Manual,-0.0403895901908344,,PQ rate (all MOBs)
+NRP-L,202504,Coll_Principal,,,Manual,-0.012689719,,PQ rate (all MOBs)
+NRP-L,202504,Coll_Interest,,,Manual,-0.0167224008317093,,PQ rate (all MOBs)
+NRP-M,202504,Coll_Principal,,,Manual,-0.020201579,,PQ rate (all MOBs)
+NRP-M,202504,Coll_Interest,,,Manual,-0.017691446467127,,PQ rate (all MOBs)
+NRP-S,202504,Coll_Principal,,,Manual,-0.0586818699999999,,PQ rate (all MOBs)
+NRP-S,202504,Coll_Interest,,,Manual,-0.0231080570920808,,PQ rate (all MOBs)
+PRIME,202504,Coll_Principal,,,Manual,0.0,,PQ rate (all MOBs)
+PRIME,202504,Coll_Interest,,,Manual,-0.0104333889673843,,PQ rate (all MOBs)
+NON PRIME,202505,Coll_Principal,,,Manual,-0.046759157,,PQ rate (all MOBs)
+NON PRIME,202505,Coll_Interest,,,Manual,-0.0343661326222317,,PQ rate (all MOBs)
+NRP-L,202505,Coll_Principal,,,Manual,-0.0119223044484732,,PQ rate (all MOBs)
+NRP-L,202505,Coll_Interest,,,Manual,-0.0157246180111814,,PQ rate (all MOBs)
+NRP-M,202505,Coll_Principal,,,Manual,-0.0275,,PQ rate (all MOBs)
+NRP-M,202505,Coll_Interest,,,Manual,-0.0166,,PQ rate (all MOBs)
+NRP-S,202505,Coll_Principal,,,Manual,-0.0495,,PQ rate (all MOBs)
+NRP-S,202505,Coll_Interest,,,Manual,-0.0216,,PQ rate (all MOBs)
+NON PRIME,202506,Coll_Principal,,,Manual,-0.045271982,,PQ rate (all MOBs)
+NON PRIME,202506,Coll_Interest,,,Manual,-0.0347241921615328,,PQ rate (all MOBs)
+NRP-L,202506,Coll_Principal,,,Manual,-0.0130633847686492,,PQ rate (all MOBs)
+NRP-L,202506,Coll_Interest,,,Manual,-0.0167418668976997,,PQ rate (all MOBs)
+NRP-M,202506,Coll_Principal,,,Manual,-0.0201,,PQ rate (all MOBs)
+NRP-M,202506,Coll_Interest,,,Manual,-0.0163,,PQ rate (all MOBs)
+NRP-S,202506,Coll_Principal,,,Manual,-0.0537999999999999,,PQ rate (all MOBs)
+NRP-S,202506,Coll_Interest,,,Manual,-0.0227,,PQ rate (all MOBs)
+NON PRIME,202507,Coll_Principal,,,Manual,-0.0436,,PQ rate (all MOBs)
+NON PRIME,202507,Coll_Interest,,,Manual,-0.041,,PQ rate (all MOBs)
+NRP-L,202507,Coll_Principal,,,Manual,-0.0115,,PQ rate (all MOBs)
+NRP-L,202507,Coll_Interest,,,Manual,-0.0185,,PQ rate (all MOBs)
+NRP-M,202507,Coll_Principal,,,Manual,-0.0163,,PQ rate (all MOBs)
+NRP-M,202507,Coll_Interest,,,Manual,-0.0172,,PQ rate (all MOBs)
+NRP-S,202507,Coll_Principal,,,Manual,-0.0398,,PQ rate (all MOBs)
+NRP-S,202507,Coll_Interest,,,Manual,-0.0239,,PQ rate (all MOBs)
+PRIME,202507,Coll_Principal,,,Manual,-0.0117,,PQ rate (all MOBs)
+PRIME,202507,Coll_Interest,,,Manual,-0.0116,,PQ rate (all MOBs)
+NON PRIME,202508,Coll_Principal,,,Manual,-0.0491,,PQ rate (all MOBs)
+NON PRIME,202508,Coll_Interest,,,Manual,-0.0328,,PQ rate (all MOBs)
+NRP-L,202508,Coll_Principal,,,Manual,-0.0151,,PQ rate (all MOBs)
+NRP-L,202508,Coll_Interest,,,Manual,-0.0151,,PQ rate (all MOBs)
+NRP-M,202508,Coll_Principal,,,Manual,-0.0199,,PQ rate (all MOBs)
+NRP-M,202508,Coll_Interest,,,Manual,-0.0122,,PQ rate (all MOBs)
+NRP-S,202508,Coll_Principal,,,Manual,-0.0399,,PQ rate (all MOBs)
+NRP-S,202508,Coll_Interest,,,Manual,-0.0183,,PQ rate (all MOBs)
+PRIME,202508,Coll_Principal,,,Manual,-0.0076,,PQ rate (all MOBs)
+PRIME,202508,Coll_Interest,,,Manual,-0.0039,,PQ rate (all MOBs)
+NON PRIME,202509,Coll_Principal,,,Manual,-0.018,,PQ rate (all MOBs)
+NON PRIME,202509,Coll_Interest,,,Manual,-0.0037,,PQ rate (all MOBs)
+NRP-L,202509,Coll_Principal,,,Manual,-0.0195,,PQ rate (all MOBs)
+NRP-L,202509,Coll_Interest,,,Manual,-0.009,,PQ rate (all MOBs)
+NRP-M,202509,Coll_Principal,,,Manual,-0.0129,,PQ rate (all MOBs)
+NRP-M,202509,Coll_Interest,,,Manual,-0.0016,,PQ rate (all MOBs)
+NRP-S,202509,Coll_Principal,,,Manual,-0.0168,,PQ rate (all MOBs)
+NRP-S,202509,Coll_Interest,,,Manual,-0.0025,,PQ rate (all MOBs)
+PRIME,202509,Coll_Principal,,,Manual,-0.0075,,PQ rate (all MOBs)
+PRIME,202509,Coll_Interest,,,Manual,-0.0044,,PQ rate (all MOBs)
+NON PRIME,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NRP-L,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NRP-M,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NRP-S,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+PRIME,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NON PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+NRP-L,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+NRP-M,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+NRP-S,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+ALL,202505,InterestRevenue,0,999,CohortAvg,,,Original budget rate
+ALL,202506,InterestRevenue,0,999,CohortAvg,,,Original budget rate
+ALL,ALL,InterestRevenue,0,999,CohortTrend,,,Original budget rate
+NON PRIME,202507,InterestRevenue,0,999,Manual,0.4534,,Original budget rate
+NON PRIME,202508,InterestRevenue,0,999,Manual,0.4552,,Original budget rate
+NON PRIME,202509,InterestRevenue,0,999,Manual,0.4552,,Original budget rate
+NRP-L,202507,InterestRevenue,0,999,Manual,0.2022,,Original budget rate
+NRP-L,202508,InterestRevenue,0,999,Manual,0.1838,,Original budget rate
+NRP-L,202509,InterestRevenue,0,999,Manual,0.1838,,Original budget rate
+NRP-M,202507,InterestRevenue,0,999,Manual,0.1867,,Original budget rate
+NRP-M,202508,InterestRevenue,0,999,Manual,0.189,,Original budget rate
+NRP-M,202509,InterestRevenue,0,999,Manual,0.189,,Original budget rate
+NRP-S,202507,InterestRevenue,0,999,Manual,0.2548,,Original budget rate
+NRP-S,202508,InterestRevenue,0,999,Manual,0.2461,,Original budget rate
+NRP-S,202509,InterestRevenue,0,999,Manual,0.2461,,Original budget rate
+PRIME,202507,InterestRevenue,0,999,Manual,0.1356,,Original budget rate
+PRIME,202508,InterestRevenue,0,999,Manual,0.1349,,Original budget rate
+PRIME,202509,InterestRevenue,0,999,Manual,0.1349,,Original budget rate
+NON PRIME,201912,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,average looks sensible for mature cohorts
+NON PRIME,202001,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,average looks sensible for mature cohorts
+NON PRIME,202101,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,average looks sensible for mature cohorts
+NON PRIME,202201,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202301,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202404,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202405,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202406,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202407,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202408,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202409,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202410,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202411,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202412,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202501,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202502,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202503,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202504,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202505,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202506,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202507,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202508,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202509,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NRP-L,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202409,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202410,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202411,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202412,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202501,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202502,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202503,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202504,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202505,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202506,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202507,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202508,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202509,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-M,202001,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-M,202101,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-M,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202301,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-M,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202409,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202410,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202411,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202412,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202501,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202502,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202503,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202504,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202505,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,201912,Total_Coverage_Ratio,0,999,CohortAvg,,,
+NRP-S,202001,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-S,202101,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-S,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202409,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202410,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202411,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202412,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202501,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202502,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202503,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202504,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202505,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
+PRIME,202101,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+PRIME,202201,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PRIME mature
+PRIME,202405,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,WHY ARE THESE RATES 0???
+PRIME,202407,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202409,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202504,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202507,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202508,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202509,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NON PRIME,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NRP-L,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NRP-M,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NRP-S,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+PRIME,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NON PRIME,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+NRP-L,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+NRP-M,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+NRP-S,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+PRIME,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
