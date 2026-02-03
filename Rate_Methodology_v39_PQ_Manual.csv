@@ -1,0 +1,325 @@
+Segment,Cohort,Metric,MOB_Start,MOB_End,Approach,Param1,Param2,Explanation
+NON PRIME,201912,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+NON PRIME,201912,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-S,201912,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+NRP-S,201912,Coll_Interest,,,Manual,-0.004050721826727709,,PQ rate for Oct-25
+NON PRIME,202001,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+NON PRIME,202001,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-S,202001,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+NRP-S,202001,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NON PRIME,202101,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+NON PRIME,202101,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-M,202101,Coll_Principal,,,Manual,-0.07313923,,PQ rate for Oct-25
+NRP-M,202101,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-S,202101,Coll_Principal,,,Manual,-0.07403968,,PQ rate for Oct-25
+NRP-S,202101,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+PRIME,202101,Coll_Principal,,,Manual,-0.068605779,,PQ rate for Oct-25
+PRIME,202101,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NON PRIME,202201,Coll_Principal,,,Manual,-0.094739375,,PQ rate for Oct-25
+NON PRIME,202201,Coll_Interest,,,Manual,-0.013486887340537688,,PQ rate for Oct-25
+NRP-M,202201,Coll_Principal,,,Manual,-0.071473967,,PQ rate for Oct-25
+NRP-M,202201,Coll_Interest,,,Manual,-0.012165453466908987,,PQ rate for Oct-25
+NRP-S,202201,Coll_Principal,,,Manual,-0.002,,PQ rate for Oct-25
+NRP-S,202201,Coll_Interest,,,Manual,-0.010830941116161858,,PQ rate for Oct-25
+PRIME,202201,Coll_Principal,,,Manual,-0.11001051399999999,,PQ rate for Oct-25
+PRIME,202201,Coll_Interest,,,Manual,-0.009289056728675965,,PQ rate for Oct-25
+NON PRIME,202301,Coll_Principal,,,Manual,-0.076308978,,PQ rate for Oct-25
+NON PRIME,202301,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-L,202301,Coll_Principal,,,Manual,-0.03717244,,PQ rate for Oct-25
+NRP-L,202301,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-M,202301,Coll_Principal,,,Manual,-0.038675193,,PQ rate for Oct-25
+NRP-M,202301,Coll_Interest,,,Manual,0.0,,PQ rate for Oct-25
+NRP-S,202301,Coll_Principal,,,Manual,-0.061882725,,PQ rate for Oct-25
+NRP-S,202301,Coll_Interest,,,Manual,-0.030000000000000002,,PQ rate for Oct-25
+NON PRIME,202404,Coll_Principal,,,Manual,-0.089870411,,PQ rate for Oct-25
+NON PRIME,202404,Coll_Interest,,,Manual,-0.022112658504688555,,PQ rate for Oct-25
+NRP-L,202404,Coll_Principal,,,Manual,-0.068010122,,PQ rate for Oct-25
+NRP-L,202404,Coll_Interest,,,Manual,-0.014593680279013956,,PQ rate for Oct-25
+NRP-M,202404,Coll_Principal,,,Manual,-0.045967313,,PQ rate for Oct-25
+NRP-M,202404,Coll_Interest,,,Manual,-0.014456669244380839,,PQ rate for Oct-25
+NRP-S,202404,Coll_Principal,,,Manual,-0.04771413617282482,,PQ rate for Oct-25
+NRP-S,202404,Coll_Interest,,,Manual,-0.016222874197426157,,PQ rate for Oct-25
+NON PRIME,202405,Coll_Principal,,,Manual,-0.05924055582633506,,PQ rate for Oct-25
+NON PRIME,202405,Coll_Interest,,,Manual,-0.021825804867282778,,PQ rate for Oct-25
+NRP-L,202405,Coll_Principal,,,Manual,-0.03185619927404175,,PQ rate for Oct-25
+NRP-L,202405,Coll_Interest,,,Manual,-0.012397363043349065,,PQ rate for Oct-25
+NRP-M,202405,Coll_Principal,,,Manual,-0.026101566329308164,,PQ rate for Oct-25
+NRP-M,202405,Coll_Interest,,,Manual,-0.01475937392927938,,PQ rate for Oct-25
+NRP-S,202405,Coll_Principal,,,Manual,-0.051089411787263186,,PQ rate for Oct-25
+NRP-S,202405,Coll_Interest,,,Manual,-0.016881838195991924,,PQ rate for Oct-25
+PRIME,202405,Coll_Principal,,,Manual,-0.01614689702158865,,PQ rate for Oct-25
+PRIME,202405,Coll_Interest,,,Manual,-0.01003387010629722,,PQ rate for Oct-25
+NON PRIME,202406,Coll_Principal,,,Manual,-0.064744089,,PQ rate for Oct-25
+NON PRIME,202406,Coll_Interest,,,Manual,-0.023595990427906555,,PQ rate for Oct-25
+NRP-L,202406,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+NRP-L,202406,Coll_Interest,,,Manual,-0.015464279601515871,,PQ rate for Oct-25
+NRP-M,202406,Coll_Principal,,,Manual,-0.030479274999999997,,PQ rate for Oct-25
+NRP-M,202406,Coll_Interest,,,Manual,-0.013908146231078446,,PQ rate for Oct-25
+NRP-S,202406,Coll_Principal,,,Manual,-0.053663639,,PQ rate for Oct-25
+NRP-S,202406,Coll_Interest,,,Manual,-0.017396668497208168,,PQ rate for Oct-25
+NON PRIME,202407,Coll_Principal,,,Manual,-0.06057598207773581,,PQ rate for Oct-25
+NON PRIME,202407,Coll_Interest,,,Manual,-0.02417746996605965,,PQ rate for Oct-25
+NRP-L,202407,Coll_Principal,,,Manual,-0.038788217195396366,,PQ rate for Oct-25
+NRP-L,202407,Coll_Interest,,,Manual,-0.015215584596438295,,PQ rate for Oct-25
+NRP-M,202407,Coll_Principal,,,Manual,-0.02675740204168905,,PQ rate for Oct-25
+NRP-M,202407,Coll_Interest,,,Manual,-0.01467801802425435,,PQ rate for Oct-25
+NRP-S,202407,Coll_Principal,,,Manual,-0.05833191412836775,,PQ rate for Oct-25
+NRP-S,202407,Coll_Interest,,,Manual,-0.017403292830884712,,PQ rate for Oct-25
+PRIME,202407,Coll_Principal,,,Manual,-0.048857378563197745,,PQ rate for Oct-25
+PRIME,202407,Coll_Interest,,,Manual,-0.010369254765526486,,PQ rate for Oct-25
+NON PRIME,202408,Coll_Principal,,,Manual,-0.06510046389549004,,PQ rate for Oct-25
+NON PRIME,202408,Coll_Interest,,,Manual,-0.023717630354851173,,PQ rate for Oct-25
+NRP-L,202408,Coll_Principal,,,Manual,-0.029432438895651083,,PQ rate for Oct-25
+NRP-L,202408,Coll_Interest,,,Manual,-0.01562285742149773,,PQ rate for Oct-25
+NRP-M,202408,Coll_Principal,,,Manual,-0.027970359154797456,,PQ rate for Oct-25
+NRP-M,202408,Coll_Interest,,,Manual,-0.015438600074969134,,PQ rate for Oct-25
+NRP-S,202408,Coll_Principal,,,Manual,-0.04701412340139748,,PQ rate for Oct-25
+NRP-S,202408,Coll_Interest,,,Manual,-0.017921791935267703,,PQ rate for Oct-25
+NON PRIME,202409,Coll_Principal,,,Manual,-0.06611089758290138,,PQ rate for Oct-25
+NON PRIME,202409,Coll_Interest,,,Manual,-0.024839236003307414,,PQ rate for Oct-25
+NRP-L,202409,Coll_Principal,,,Manual,-0.022995730783393207,,PQ rate for Oct-25
+NRP-L,202409,Coll_Interest,,,Manual,-0.015367713577337714,,PQ rate for Oct-25
+NRP-M,202409,Coll_Principal,,,Manual,-0.03237894799797977,,PQ rate for Oct-25
+NRP-M,202409,Coll_Interest,,,Manual,-0.01568863271330172,,PQ rate for Oct-25
+NRP-S,202409,Coll_Principal,,,Manual,-0.05666179348192673,,PQ rate for Oct-25
+NRP-S,202409,Coll_Interest,,,Manual,-0.01835725706164607,,PQ rate for Oct-25
+PRIME,202409,Coll_Principal,,,Manual,-0.040179142295274244,,PQ rate for Oct-25
+PRIME,202409,Coll_Interest,,,Manual,-0.010392937055596723,,PQ rate for Oct-25
+NON PRIME,202410,Coll_Principal,,,Manual,-0.06150337578172061,,PQ rate for Oct-25
+NON PRIME,202410,Coll_Interest,,,Manual,-0.025904998275963206,,PQ rate for Oct-25
+NRP-L,202410,Coll_Principal,,,Manual,-0.023311798616049206,,PQ rate for Oct-25
+NRP-L,202410,Coll_Interest,,,Manual,-0.016741339110352138,,PQ rate for Oct-25
+NRP-M,202410,Coll_Principal,,,Manual,-0.03125736335058774,,PQ rate for Oct-25
+NRP-M,202410,Coll_Interest,,,Manual,-0.015586421222235185,,PQ rate for Oct-25
+NRP-S,202410,Coll_Principal,,,Manual,-0.05077712161079997,,PQ rate for Oct-25
+NRP-S,202410,Coll_Interest,,,Manual,-0.018393055828719335,,PQ rate for Oct-25
+NON PRIME,202411,Coll_Principal,,,Manual,-0.06359133739209169,,PQ rate for Oct-25
+NON PRIME,202411,Coll_Interest,,,Manual,-0.026972837046246326,,PQ rate for Oct-25
+NRP-L,202411,Coll_Principal,,,Manual,-0.029435863607994626,,PQ rate for Oct-25
+NRP-L,202411,Coll_Interest,,,Manual,-0.015039281850903044,,PQ rate for Oct-25
+NRP-M,202411,Coll_Principal,,,Manual,-0.034583067231373,,PQ rate for Oct-25
+NRP-M,202411,Coll_Interest,,,Manual,-0.016713800176484526,,PQ rate for Oct-25
+NRP-S,202411,Coll_Principal,,,Manual,-0.05066039917984447,,PQ rate for Oct-25
+NRP-S,202411,Coll_Interest,,,Manual,-0.01905329926945733,,PQ rate for Oct-25
+NON PRIME,202412,Coll_Principal,,,Manual,-0.062396280248326635,,PQ rate for Oct-25
+NON PRIME,202412,Coll_Interest,,,Manual,-0.02818567868235041,,PQ rate for Oct-25
+NRP-L,202412,Coll_Principal,,,Manual,-0.008410335316075084,,PQ rate for Oct-25
+NRP-L,202412,Coll_Interest,,,Manual,-0.010730373399153581,,PQ rate for Oct-25
+NRP-M,202412,Coll_Principal,,,Manual,-0.025716826185615594,,PQ rate for Oct-25
+NRP-M,202412,Coll_Interest,,,Manual,-0.01593653007550338,,PQ rate for Oct-25
+NRP-S,202412,Coll_Principal,,,Manual,-0.052420405626016305,,PQ rate for Oct-25
+NRP-S,202412,Coll_Interest,,,Manual,-0.019189970790863403,,PQ rate for Oct-25
+NON PRIME,202501,Coll_Principal,,,Manual,-0.059648294422034384,,PQ rate for Oct-25
+NON PRIME,202501,Coll_Interest,,,Manual,-0.028210689080820476,,PQ rate for Oct-25
+NRP-L,202501,Coll_Principal,,,Manual,-0.014701118537952085,,PQ rate for Oct-25
+NRP-L,202501,Coll_Interest,,,Manual,-0.017640635145887266,,PQ rate for Oct-25
+NRP-M,202501,Coll_Principal,,,Manual,-0.028349192374041498,,PQ rate for Oct-25
+NRP-M,202501,Coll_Interest,,,Manual,-0.016806735775107714,,PQ rate for Oct-25
+NRP-S,202501,Coll_Principal,,,Manual,-0.04885233441516299,,PQ rate for Oct-25
+NRP-S,202501,Coll_Interest,,,Manual,-0.019690685720317548,,PQ rate for Oct-25
+NON PRIME,202502,Coll_Principal,,,Manual,-0.0592373249155959,,PQ rate for Oct-25
+NON PRIME,202502,Coll_Interest,,,Manual,-0.028790211295904707,,PQ rate for Oct-25
+NRP-L,202502,Coll_Principal,,,Manual,-0.01267030397719728,,PQ rate for Oct-25
+NRP-L,202502,Coll_Interest,,,Manual,-0.018014915020579853,,PQ rate for Oct-25
+NRP-M,202502,Coll_Principal,,,Manual,-0.03270930810721614,,PQ rate for Oct-25
+NRP-M,202502,Coll_Interest,,,Manual,-0.016654820113241275,,PQ rate for Oct-25
+NRP-S,202502,Coll_Principal,,,Manual,-0.0508124511023973,,PQ rate for Oct-25
+NRP-S,202502,Coll_Interest,,,Manual,-0.018034435335680776,,PQ rate for Oct-25
+NON PRIME,202503,Coll_Principal,,,Manual,-0.05442670009539234,,PQ rate for Oct-25
+NON PRIME,202503,Coll_Interest,,,Manual,-0.03496368868952725,,PQ rate for Oct-25
+NRP-L,202503,Coll_Principal,,,Manual,-0.009832330485182847,,PQ rate for Oct-25
+NRP-L,202503,Coll_Interest,,,Manual,-0.012102753276155669,,PQ rate for Oct-25
+NRP-M,202503,Coll_Principal,,,Manual,-0.023300316610225375,,PQ rate for Oct-25
+NRP-M,202503,Coll_Interest,,,Manual,-0.017353269456733593,,PQ rate for Oct-25
+NRP-S,202503,Coll_Principal,,,Manual,-0.048329993161368906,,PQ rate for Oct-25
+NRP-S,202503,Coll_Interest,,,Manual,-0.02215077413292859,,PQ rate for Oct-25
+NON PRIME,202504,Coll_Principal,,,Manual,-0.053667037,,PQ rate for Oct-25
+NON PRIME,202504,Coll_Interest,,,Manual,-0.04038959019083447,,PQ rate for Oct-25
+NRP-L,202504,Coll_Principal,,,Manual,-0.012689719,,PQ rate for Oct-25
+NRP-L,202504,Coll_Interest,,,Manual,-0.01672240083170938,,PQ rate for Oct-25
+NRP-M,202504,Coll_Principal,,,Manual,-0.020201579,,PQ rate for Oct-25
+NRP-M,202504,Coll_Interest,,,Manual,-0.017691446467127055,,PQ rate for Oct-25
+NRP-S,202504,Coll_Principal,,,Manual,-0.05868186999999999,,PQ rate for Oct-25
+NRP-S,202504,Coll_Interest,,,Manual,-0.023108057092080896,,PQ rate for Oct-25
+PRIME,202504,Coll_Principal,,,Manual,0.0,,PQ rate for Oct-25
+PRIME,202504,Coll_Interest,,,Manual,-0.010433388967384355,,PQ rate for Oct-25
+NON PRIME,202505,Coll_Principal,,,Manual,-0.046759157,,PQ rate for Oct-25
+NON PRIME,202505,Coll_Interest,,,Manual,-0.03436613262223177,,PQ rate for Oct-25
+NRP-L,202505,Coll_Principal,,,Manual,-0.011922304448473203,,PQ rate for Oct-25
+NRP-L,202505,Coll_Interest,,,Manual,-0.01572461801118145,,PQ rate for Oct-25
+NRP-M,202505,Coll_Principal,,,Manual,-0.0275,,PQ rate for Oct-25
+NRP-M,202505,Coll_Interest,,,Manual,-0.0166,,PQ rate for Oct-25
+NRP-S,202505,Coll_Principal,,,Manual,-0.0495,,PQ rate for Oct-25
+NRP-S,202505,Coll_Interest,,,Manual,-0.0216,,PQ rate for Oct-25
+NON PRIME,202506,Coll_Principal,,,Manual,-0.045271982,,PQ rate for Oct-25
+NON PRIME,202506,Coll_Interest,,,Manual,-0.03472419216153285,,PQ rate for Oct-25
+NRP-L,202506,Coll_Principal,,,Manual,-0.01306338476864925,,PQ rate for Oct-25
+NRP-L,202506,Coll_Interest,,,Manual,-0.01674186689769977,,PQ rate for Oct-25
+NRP-M,202506,Coll_Principal,,,Manual,-0.0201,,PQ rate for Oct-25
+NRP-M,202506,Coll_Interest,,,Manual,-0.0163,,PQ rate for Oct-25
+NRP-S,202506,Coll_Principal,,,Manual,-0.053799999999999994,,PQ rate for Oct-25
+NRP-S,202506,Coll_Interest,,,Manual,-0.0227,,PQ rate for Oct-25
+NON PRIME,202507,Coll_Principal,,,Manual,-0.0436,,PQ rate for Oct-25
+NON PRIME,202507,Coll_Interest,,,Manual,-0.041,,PQ rate for Oct-25
+NRP-L,202507,Coll_Principal,,,Manual,-0.0115,,PQ rate for Oct-25
+NRP-L,202507,Coll_Interest,,,Manual,-0.0185,,PQ rate for Oct-25
+NRP-M,202507,Coll_Principal,,,Manual,-0.0163,,PQ rate for Oct-25
+NRP-M,202507,Coll_Interest,,,Manual,-0.0172,,PQ rate for Oct-25
+NRP-S,202507,Coll_Principal,,,Manual,-0.0398,,PQ rate for Oct-25
+NRP-S,202507,Coll_Interest,,,Manual,-0.0239,,PQ rate for Oct-25
+PRIME,202507,Coll_Principal,,,Manual,-0.0117,,PQ rate for Oct-25
+PRIME,202507,Coll_Interest,,,Manual,-0.0116,,PQ rate for Oct-25
+NON PRIME,202508,Coll_Principal,,,Manual,-0.0491,,PQ rate for Oct-25
+NON PRIME,202508,Coll_Interest,,,Manual,-0.0328,,PQ rate for Oct-25
+NRP-L,202508,Coll_Principal,,,Manual,-0.015100000000000002,,PQ rate for Oct-25
+NRP-L,202508,Coll_Interest,,,Manual,-0.015100000000000002,,PQ rate for Oct-25
+NRP-M,202508,Coll_Principal,,,Manual,-0.0199,,PQ rate for Oct-25
+NRP-M,202508,Coll_Interest,,,Manual,-0.012200000000000003,,PQ rate for Oct-25
+NRP-S,202508,Coll_Principal,,,Manual,-0.0399,,PQ rate for Oct-25
+NRP-S,202508,Coll_Interest,,,Manual,-0.0183,,PQ rate for Oct-25
+PRIME,202508,Coll_Principal,,,Manual,-0.0076,,PQ rate for Oct-25
+PRIME,202508,Coll_Interest,,,Manual,-0.0039,,PQ rate for Oct-25
+NON PRIME,202509,Coll_Principal,,,Manual,-0.018,,PQ rate for Oct-25
+NON PRIME,202509,Coll_Interest,,,Manual,-0.0037,,PQ rate for Oct-25
+NRP-L,202509,Coll_Principal,,,Manual,-0.0195,,PQ rate for Oct-25
+NRP-L,202509,Coll_Interest,,,Manual,-0.009,,PQ rate for Oct-25
+NRP-M,202509,Coll_Principal,,,Manual,-0.0129,,PQ rate for Oct-25
+NRP-M,202509,Coll_Interest,,,Manual,-0.0016,,PQ rate for Oct-25
+NRP-S,202509,Coll_Principal,,,Manual,-0.0168,,PQ rate for Oct-25
+NRP-S,202509,Coll_Interest,,,Manual,-0.0025,,PQ rate for Oct-25
+PRIME,202509,Coll_Principal,,,Manual,-0.0075,,PQ rate for Oct-25
+PRIME,202509,Coll_Interest,,,Manual,-0.0044,,PQ rate for Oct-25
+NON PRIME,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NRP-L,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NRP-M,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NRP-S,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+PRIME,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
+NON PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+NRP-L,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+NRP-M,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+NRP-S,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
+ALL,202505,InterestRevenue,0,999,CohortAvg,,,Original budget rate
+ALL,202506,InterestRevenue,0,999,CohortAvg,,,Original budget rate
+ALL,ALL,InterestRevenue,0,999,CohortTrend,,,Original budget rate
+NON PRIME,202507,InterestRevenue,0,999,Manual,0.4534,,Original budget rate
+NON PRIME,202508,InterestRevenue,0,999,Manual,0.4552,,Original budget rate
+NON PRIME,202509,InterestRevenue,0,999,Manual,0.4552,,Original budget rate
+NRP-L,202507,InterestRevenue,0,999,Manual,0.2022,,Original budget rate
+NRP-L,202508,InterestRevenue,0,999,Manual,0.1838,,Original budget rate
+NRP-L,202509,InterestRevenue,0,999,Manual,0.1838,,Original budget rate
+NRP-M,202507,InterestRevenue,0,999,Manual,0.1867,,Original budget rate
+NRP-M,202508,InterestRevenue,0,999,Manual,0.189,,Original budget rate
+NRP-M,202509,InterestRevenue,0,999,Manual,0.189,,Original budget rate
+NRP-S,202507,InterestRevenue,0,999,Manual,0.2548,,Original budget rate
+NRP-S,202508,InterestRevenue,0,999,Manual,0.2461,,Original budget rate
+NRP-S,202509,InterestRevenue,0,999,Manual,0.2461,,Original budget rate
+PRIME,202507,InterestRevenue,0,999,Manual,0.1356,,Original budget rate
+PRIME,202508,InterestRevenue,0,999,Manual,0.1349,,Original budget rate
+PRIME,202509,InterestRevenue,0,999,Manual,0.1349,,Original budget rate
+NON PRIME,201912,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,average looks sensible for mature cohorts
+NON PRIME,202001,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,average looks sensible for mature cohorts
+NON PRIME,202101,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,average looks sensible for mature cohorts
+NON PRIME,202201,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202301,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202404,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202405,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202406,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202407,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202408,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202409,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202410,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202411,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202412,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202501,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202502,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202503,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202504,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202505,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202506,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202507,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202508,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NON PRIME,202509,Total_Coverage_Ratio,0,999,SegMedian,,,CHANGED from DonorCohort to SegMedian for lower impairment
+NRP-L,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-L,202409,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202410,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202411,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202412,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202501,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202502,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202503,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202504,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202505,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202506,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202507,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202508,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-L,202509,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NRP-M,202001,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-M,202101,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-M,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202301,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-M,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202409,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202410,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202411,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202412,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202501,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202502,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202503,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202504,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202505,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,201912,Total_Coverage_Ratio,0,999,CohortAvg,,,
+NRP-S,202001,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-S,202101,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+NRP-S,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202409,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202410,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202411,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202412,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202501,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202502,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202503,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202504,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202505,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-S,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
+PRIME,202101,Total_Coverage_Ratio,0,999,Manual,0.0,,negligible remaining balance
+PRIME,202201,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PRIME mature
+PRIME,202405,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,WHY ARE THESE RATES 0???
+PRIME,202407,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202409,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202504,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202507,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202508,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+PRIME,202509,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
+NON PRIME,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NRP-L,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NRP-M,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NRP-S,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+PRIME,ALL,WO_DebtSold,0,999,Zero,,,Reduce WO to preserve GBV
+NON PRIME,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+NRP-L,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+NRP-M,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+NRP-S,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
+PRIME,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
