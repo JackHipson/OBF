@@ -1,0 +1,71 @@
+
+================================================================================
+NBV DISCREPANCY ANALYSIS - REVISED FINDINGS
+================================================================================
+
+CREDIT TEAM OBSERVATION:
+"NBV is below budget but balance sheet disbursals are above budget"
+
+================================================================================
+KEY FINDING: CONTRA SETTLEMENTS ARE NOT MODELED
+================================================================================
+
+Both the original budget (PQ) and the v3.2 Python model assume ZERO contra 
+settlements. However, actuals show ~1.2% of GBV per month is being removed 
+through contra settlements from top-ups.
+
+WHAT ARE CONTRA SETTLEMENTS?
+- When a customer does a top-up, their old loan is "contra-settled" (closed)
+- A new loan is created for the combined amount (old balance + top-up)
+- The old loan's balance is removed from GBV via contra settlement
+
+================================================================================
+QUANTIFIED IMPACT
+================================================================================
+
+                                Budget/Model    Actuals     Gap
+                                ------------    -------     ---
+Regular Collection Rate:        -6.1%           -7.2%       -1.1pp
+Contra Settlement Rate:          0.0%           -1.2%       -1.2pp
+                                ------          ------      ------
+TOTAL Outflow Rate:             -6.1%           -8.4%       -2.3pp
+
+ANNUAL GBV IMPACT:
+- Missing contra settlements:      ~£40M overstatement
+- Higher regular collections:      ~£36M overstatement
+- TOTAL GBV GAP:                   ~£50-60M over 12 months
+
+================================================================================
+WHY THIS EXPLAINS THE NBV SHORTFALL
+================================================================================
+
+1. Budget assumes GBV runs off at ~6.1% per month
+2. Actual GBV runs off at ~8.4% per month (collections + contra settlements)
+3. This 2.3pp difference compounds each month
+4. Even with higher disbursals, the faster runoff means lower GBV
+5. Lower GBV = Lower NBV (since NBV = GBV - Provision)
+
+PREVIOUS ANALYSIS WAS INCOMPLETE:
+We identified higher collection rates but missed that contra settlements
+(which are SEPARATE from collections in the data) account for MORE than
+half of the gap!
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. [HIGH] Add contra settlement forecasting to the model
+   - Use ~1.2% monthly rate based on historical top-up activity
+   
+2. [HIGH] Recalibrate regular collection rates
+   - Update from -6.1% to -7.2% based on actuals
+   
+3. [MEDIUM] Provide revised NBV trajectory to credit team
+   - Current budget NBV will not be achieved
+   - Explain the ~£50-60M annual gap
+
+4. [MEDIUM] Track top-up activity monthly
+   - Contra settlements are driven by top-up volumes
+   - Monitor for changes in customer behavior
+
+================================================================================
