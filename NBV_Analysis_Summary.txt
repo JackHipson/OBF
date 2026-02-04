@@ -1,0 +1,35 @@
+NBV DISCREPANCY ANALYSIS
+========================
+
+OBSERVATION: "NBV is below budget but balance sheet disbursals are above budget"
+
+ROOT CAUSE:
+-----------
+Higher actual collection rates than budgeted.
+
+KEY METRICS:
+- Actual collection rate (6-month avg): ~-7.35%
+- Budget collection rate: ~-5.4% to -6.1%
+- V3.2 collection rate: ~-6.7%
+
+EXPLANATION:
+The budget assumed collection rates of approximately -5.4% to -6.1%.
+Actual collection rates have been running at approximately -7.35%.
+
+This means the loan portfolio is being paid down FASTER than expected.
+Higher collections = Lower GBV = Lower NBV.
+
+WHY DISBURSALS DON'T HELP:
+Even though disbursals are above budget (which adds to GBV),
+the collections are ALSO above budget by an even greater margin.
+
+Example Impact:
+- £276M starting GBV
+- 1.5pp higher collection rate = £4.1M more collections per month
+- Over 6 months = ~£25M more collections than budget
+- Net result: Lower NBV despite higher disbursals
+
+CONCLUSION:
+The original budget collection rate assumptions were too conservative.
+The v3.2 model (using ~-6.7% collection rate) is closer to reality
+but still slightly optimistic compared to actual -7.35%.
