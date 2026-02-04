@@ -1,0 +1,101 @@
+
+================================================================================
+NBV VARIANCE INVESTIGATION - SUMMARY OF FINDINGS
+================================================================================
+
+INVESTIGATION DATE: 2026-02-04
+
+CONTEXT:
+--------
+Credit team reported: "NBV is below budget but disbursals are above budget"
+User asked: Is the variance in collections or in GBV→NBV conversion?
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+1. MODEL SCOPE CLARIFICATION
+   -------------------------
+   Both the original PQ model and v3.2 Python model are BACKBOOK RUNOFF models:
+   - ContraSettlements_Principal: £0 (NOT MODELED)
+   - ContraSettlements_Interest:  £0 (NOT MODELED)
+   - NewLoanAmount:              £0 (NOT MODELED)
+   
+   This is a PURE RUNOFF model - it only models existing loans running off.
+
+2. CONTRA SETTLEMENTS IMPACT
+   -------------------------
+   Actuals show ~£35M/year in contra settlements (from top-ups).
+   
+   When a customer tops up:
+   - OLD loan (backbook) is contra-settled → removed from backbook
+   - NEW loan created → goes to frontbook
+   
+   Impact: Backbook loans disappear faster than model predicts.
+   The model overstates backbook GBV because it doesn't capture
+   loans being "collected early" via top-ups.
+
+3. DEBT SALE WRITE-OFF ALLOCATION
+   ------------------------------
+   V3.2 Model forecasts: £11.2M/year in debt sales
+   
+   Actual debt sales (12 months):
+   - Backbook (pre-2024): £8.2M (30%)
+   - Frontbook (2024+):   £18.9M (70%)
+   - Total:               £27.2M
+   
+   The £16M difference between model (£11M) and total actuals (£27M)
+   is largely from frontbook, which wouldn't be in the BB model.
+   
+   POTENTIAL ISSUE: If total budget only accounts for BB debt sales,
+   but actuals have FB debt sales too, this creates a gap.
+
+4. COVERAGE RATIO ASSUMPTIONS
+   --------------------------
+   Actuals:  Coverage ratio stable at ~10.7%
+   V3.2:     Coverage ratio increases from 9.7% to 15.7%
+   
+   Model assumes INCREASING coverage (more provision relative to GBV).
+   This would make model NBV LOWER than actuals (more conservative).
+
+================================================================================
+ANSWER TO USER'S QUESTION
+================================================================================
+
+"Is the issue in GBV→NBV conversion rather than collections?"
+
+PARTIALLY YES - The sources of variance are:
+
+1. CONTRA SETTLEMENTS (affects GBV):
+   - Model overstates backbook GBV by ~£35M/year
+   - Because it doesn't capture loans being topped up (contra-settled)
+
+2. DEBT SALE ALLOCATION (affects both GBV and provision):
+   - If BB and FB debt sales are split differently in budget vs actuals
+   - This affects both GBV reduction and provision release
+   
+3. COVERAGE RATIO (affects NBV directly):
+   - If coverage assumptions differ from actuals
+   - This directly impacts the GBV→NBV conversion
+
+The collection rate variance you identified (£8.3M higher collections → £600k 
+lower GBV/NBV) is CORRECT but SMALL compared to these other factors.
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. Add contra settlements to the backbook model
+   - Use ~1.0-1.2% monthly rate based on historical top-up activity
+   - This will reduce backbook GBV faster (more realistic)
+
+2. Verify debt sale allocation between BB and FB
+   - Ensure total budget debt sales = total actual debt sales
+   - Check if FB debt sales are properly accounted for
+
+3. Review coverage ratio assumptions
+   - Model assumes increasing coverage (9.7% → 15.7%)
+   - Actuals show stable coverage (~10.7%)
+   - May need to recalibrate
+
+================================================================================
