@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mcp-registry__search_mcp_registry",
+      "mcp__mcp-registry__suggest_connectors",
+      "Bash(git clone:*)",
+      "Bash(export DATABRICKS_HOST:*)",
+      "Bash(export DATABRICKS_TOKEN=\"dapi918ccc923735f021273c61dc39c01acc\")",
+      "Bash(export DATABRICKS_WAREHOUSE_ID=\"sql_warehouse_c297d5f6ad505e69\")",
+      "Bash(C:/Users/Jack.Hipson/AppData/Local/Programs/Python/Python314/python.exe -m databricks_mcp.server.databricks_mcp_server)",
+      "Bash(C:/Users/Jack.Hipson/AppData/Local/Programs/Python/Python314/python.exe:*)",
+      "mcp__databricks-mcp__list_clusters",
+      "mcp__databricks-mcp__list_jobs",
+      "mcp__databricks-mcp__list_notebooks",
+      "mcp__databricks-mcp__import_notebook",
+      "mcp__databricks-mcp__export_notebook",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)"
+    ]
+  }
+}
