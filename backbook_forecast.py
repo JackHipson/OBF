@@ -90,7 +90,7 @@ class Config:
 
     # Overlay configuration
     ENABLE_OVERLAYS: bool = True  # Enable overlay adjustments
-    OVERLAY_FILE: str = 'sample_data/Overlays.csv'  # Path to overlay configuration file
+    OVERLAY_FILE: str = 'Overlays.csv'  # Path to overlay configuration file
 
 
 # =============================================================================

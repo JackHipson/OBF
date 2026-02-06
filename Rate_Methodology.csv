@@ -38,26 +38,26 @@ PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
 NON PRIME,201912,Total_Coverage_Ratio,0,999,CohortAvg,6,,average looks sensible for mature cohorts
 NON PRIME,202001,Total_Coverage_Ratio,0,999,CohortAvg,6,,average looks sensible for mature cohorts
 NON PRIME,202101,Total_Coverage_Ratio,0,999,CohortAvg,6,,average looks sensible for mature cohorts
-NON PRIME,202201,Total_Coverage_Ratio,0,999,DonorCohort,202101,,being grouped to similar looking curve
-NON PRIME,202301,Total_Coverage_Ratio,0,999,DonorCohort,202101,,being grouped to similar looking curve
-NON PRIME,202404,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve
-NON PRIME,202405,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve
-NON PRIME,202406,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve. Slightly tenous
-NON PRIME,202407,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve. Slightly tenous
-NON PRIME,202408,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve. Slightly tenous
-NON PRIME,202409,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve. Slightly tenous
-NON PRIME,202410,Total_Coverage_Ratio,0,999,DonorCohort,202201,,being grouped to similar looking curve. Slightly tenous
-NON PRIME,202411,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202412,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202501,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202502,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202503,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202504,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202505,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202506,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202507,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202508,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
-NON PRIME,202509,Total_Coverage_Ratio,0,999,DonorCohort,202001,,being grouped to similar looking curve
+NON PRIME,202201,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202301,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202404,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202405,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202406,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202407,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202408,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202409,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202410,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202411,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202412,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202501,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202502,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202503,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202504,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202505,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202506,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202507,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202508,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
+NON PRIME,202509,Total_Coverage_Ratio,0,999,SegMedian,,,PHASE3: SegMedian for stable rising pattern
 NRP-S,ALL,InterestRevenue,0,12,DonorCohort,202405,,Young-donor
 NRP-S,ALL,InterestRevenue,13,36,CohortTrend,6,,Mid-trend
 NRP-S,ALL,InterestRevenue,37,999,CohortAvg,6,,Mature-flat
@@ -88,10 +88,10 @@ NRP-L,202506,Total_Coverage_Ratio,0,999,CohortAvg,6,,
 NRP-L,202507,Total_Coverage_Ratio,0,999,CohortAvg,6,,
 NRP-L,202508,Total_Coverage_Ratio,0,999,CohortAvg,6,,
 NRP-L,202509,Total_Coverage_Ratio,0,999,CohortAvg,6,,
-NRP-M,202001,Total_Coverage_Ratio,0,999,Manual,0,,negligible remaining balance
-NRP-M,202101,Total_Coverage_Ratio,0,999,Manual,0,,negligible remaining balance
+NRP-M,202001,Total_Coverage_Ratio,0,999,CohortAvg,6,,PHASE1: was Manual=0 - minimal balance use CohortAvg
+NRP-M,202101,Total_Coverage_Ratio,0,999,CohortAvg,6,,PHASE1: was Manual=0 - minimal balance use CohortAvg
 NRP-M,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202301,Total_Coverage_Ratio,0,999,Manual,0,,negligible remaining balance
+NRP-M,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,PHASE1: was Manual=0 - CRITICAL 4.3% GBV use CohortTrend
 NRP-M,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-M,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-M,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
@@ -111,8 +111,8 @@ NRP-M,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-M,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-M,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-S,201912,Total_Coverage_Ratio,0,999,CohortAvg,,,
-NRP-S,202001,Total_Coverage_Ratio,0,999,Manual,0,,negligible remaining balance
-NRP-S,202101,Total_Coverage_Ratio,0,999,Manual,0,,negligible remaining balance
+NRP-S,202001,Total_Coverage_Ratio,0,999,CohortAvg,6,,PHASE1: was Manual=0 - minimal balance use CohortAvg
+NRP-S,202101,Total_Coverage_Ratio,0,999,CohortAvg,6,,PHASE1: was Manual=0 - minimal balance use CohortAvg
 NRP-S,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-S,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-S,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
@@ -133,7 +133,7 @@ NRP-S,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-S,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-S,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
 NRP-S,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
-PRIME,202101,Total_Coverage_Ratio,0,999,Manual,0,,negligible remaining balance
+PRIME,202101,Total_Coverage_Ratio,0,999,CohortAvg,6,,PHASE1: was Manual=0 - minimal balance use CohortAvg
 PRIME,202201,Total_Coverage_Ratio,0,999,CohortAvg,6,,PRIME mature
 PRIME,202405,Total_Coverage_Ratio,0,999,CohortAvg,6,,WHY ARE THESE RATES 0???
 PRIME,202407,Total_Coverage_Ratio,0,999,CohortAvg,6,,
