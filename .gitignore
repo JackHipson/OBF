@@ -16,3 +16,8 @@ venv/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Intermediate model outputs (keep only final v6)
+output_v4/
+output_v5/
+output_v5_baseline/
