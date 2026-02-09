@@ -88,6 +88,12 @@ class Config:
     ENABLE_SEASONALITY: bool = False  # Disabled - seasonality can be applied as overlay later
     SEASONALITY_METRIC: str = 'Total_Coverage_Ratio'  # Metric to apply seasonality to
 
+    # CR Growth Cap - limits how much Coverage Ratio can increase per month
+    # This prevents "day-1 jump" when transitioning from actuals to forecast
+    # Based on actual data showing ~0.5pp/month CR growth
+    ENABLE_CR_GROWTH_CAP: bool = True  # Enable to smooth CR transitions
+    MAX_CR_GROWTH_PER_MONTH: float = 0.008  # Max +0.8pp per month (allows some buffer)
+
     # Overlay configuration
     ENABLE_OVERLAYS: bool = False  # Disabled - fix methodology first before applying overlays
     OVERLAY_FILE: str = 'Overlays.csv'  # Path to overlay configuration file
@@ -2447,7 +2453,24 @@ def run_one_step(seed_table: pd.DataFrame, rate_lookup: pd.DataFrame,
         ds_proceeds_rate = Config.DS_PROCEEDS_RATE  # Fixed 24p per £1 of GBV sold
 
         # Step 1: Calculate total provision balance (Closing GBV × Coverage Ratio)
-        total_coverage_ratio = imp_rates.get('Total_Coverage_Ratio', 0.12)
+        total_coverage_ratio_raw = imp_rates.get('Total_Coverage_Ratio', 0.12)
+
+        # Apply CR growth cap if enabled (prevents "day-1 jump" from seed to methodology)
+        if Config.ENABLE_CR_GROWTH_CAP and opening_gbv > 0:
+            # Calculate the implied seed CR from prior provision
+            prior_cr = prior_provision / opening_gbv if opening_gbv > 0 else 0.0
+
+            # Cap the CR growth to MAX_CR_GROWTH_PER_MONTH above prior CR
+            max_allowed_cr = prior_cr + Config.MAX_CR_GROWTH_PER_MONTH
+
+            if total_coverage_ratio_raw > max_allowed_cr and prior_cr > 0:
+                # Cap the CR growth
+                total_coverage_ratio = max_allowed_cr
+            else:
+                total_coverage_ratio = total_coverage_ratio_raw
+        else:
+            total_coverage_ratio = total_coverage_ratio_raw
+
         total_provision_balance = closing_gbv * total_coverage_ratio
 
         # Step 2: Calculate provision movement
