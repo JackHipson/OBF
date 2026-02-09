@@ -37,6 +37,8 @@ output_v12_cr_smooth/
 output_trajectory_test/
 output_validation_check/
 output_coll_fix/
+output_coll_restored/
 
 # Backup files
 Rate_Methodology_backup.csv
+Rate_Methodology_original_coll.csv
