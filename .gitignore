@@ -31,3 +31,10 @@ output_v7_cohorttrend_all/
 output_v8_coll_fix/
 output_v9_coll_fix2/
 output_v10_firstmonth/
+output_v10_debug/
+output_v11_scaled_cr/
+output_v12_cr_smooth/
+output_trajectory_test/
+
+# Backup files
+Rate_Methodology_backup.csv
