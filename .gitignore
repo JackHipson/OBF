@@ -23,3 +23,6 @@ output_v5/
 output_v5_baseline/
 output_baseline/
 output_test/
+output_test_cohorttrend/
+output_test_crossseg/
+output_v6_methodology_baseline.xlsx

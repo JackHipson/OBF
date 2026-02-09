@@ -35,9 +35,9 @@ PRIME,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
 PRIME,ALL,WO_DebtSold,0,999,SegMedian,,,Portfolio decision
 PRIME,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
 PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
-NON PRIME,201912,Total_Coverage_Ratio,0,999,ScaledCohortAvg,6.0,0.75,Scale down old cohort CR by 25%
-NON PRIME,202001,Total_Coverage_Ratio,0,999,ScaledCohortAvg,6.0,0.75,Scale down old cohort CR by 25%
-NON PRIME,202101,Total_Coverage_Ratio,0,999,ScaledCohortAvg,6.0,0.8,Scale down old cohort CR by 20%
+NON PRIME,201912,Total_Coverage_Ratio,0,999,ScaledCohortAvg,6.0,1.0,Scale down old cohort CR by 25%
+NON PRIME,202001,Total_Coverage_Ratio,0,999,ScaledCohortAvg,6.0,1.0,Scale down old cohort CR by 25%
+NON PRIME,202101,Total_Coverage_Ratio,0,999,ScaledCohortAvg,6.0,1.0,Scale down old cohort CR by 20%
 NON PRIME,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,CohortTrend for smoother rising CR
 NON PRIME,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,CohortTrend for smoother rising CR
 NON PRIME,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,CohortTrend for smoother rising CR
@@ -90,49 +90,49 @@ NRP-L,202508,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
 NRP-L,202509,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
 NRP-M,202001,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PHASE1: was Manual=0 - minimal balance use CohortAvg
 NRP-M,202101,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PHASE1: was Manual=0 - minimal balance use CohortAvg
-NRP-M,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,PHASE1: was Manual=0 - CRITICAL 4.3% GBV use CohortTrend
-NRP-M,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202409,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202410,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202411,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202412,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202501,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202502,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202503,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202504,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202505,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-M,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,201912,Total_Coverage_Ratio,0,999,CohortAvg,,,
-NRP-S,202001,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PHASE1: was Manual=0 - minimal balance use CohortAvg
-NRP-S,202101,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PHASE1: was Manual=0 - minimal balance use CohortAvg
-NRP-S,202201,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202301,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202404,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202405,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202406,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202407,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202408,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202409,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202410,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202411,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202412,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202501,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202502,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202503,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202504,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202505,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202506,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202507,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202508,Total_Coverage_Ratio,0,999,CohortTrend,,,
-NRP-S,202509,Total_Coverage_Ratio,0,999,CohortTrend,,,
+NRP-M,202201,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202201,1.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202301,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202301,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202404,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202404,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202405,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202405,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202406,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202406,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202407,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202407,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202408,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202408,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202409,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202409,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202410,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202410,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202411,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202411,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202412,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202412,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202501,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202501,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202502,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202502,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202503,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202503,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202504,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202504,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202505,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202505,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202506,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202506,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202507,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202507,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202508,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202508,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-M,202509,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202509,0.5,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,201912,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:201912,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202001,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202001,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202101,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202101,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202201,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202201,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202301,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202301,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202404,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202404,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202405,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202405,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202406,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202406,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202407,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202407,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202408,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202408,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202409,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202409,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202410,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202410,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202411,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202411,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202412,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202412,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202501,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202501,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202502,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202502,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202503,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202503,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202504,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202504,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202505,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202505,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202506,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202506,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202507,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202507,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202508,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202508,0.7,CrossSeg NON PRIME donor for rising CR shape
+NRP-S,202509,Total_Coverage_Ratio,0,999,FixedScaleDonor,NON PRIME:202509,0.7,CrossSeg NON PRIME donor for rising CR shape
 PRIME,202101,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PHASE1: was Manual=0 - minimal balance use CohortAvg
 PRIME,202201,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,PRIME mature
 PRIME,202405,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,WHY ARE THESE RATES 0???

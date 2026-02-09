@@ -81,7 +81,7 @@ class Config:
     # Valid rate calculation approaches
     VALID_APPROACHES: List[str] = [
         'CohortAvg', 'CohortTrend', 'DonorCohort', 'ScaledDonor',
-        'SegMedian', 'Manual', 'Zero', 'ScaledCohortAvg'
+        'SegMedian', 'Manual', 'Zero', 'ScaledCohortAvg', 'FixedScaleDonor'
     ]
 
     # Seasonality configuration
@@ -2034,6 +2034,43 @@ def apply_approach(curves_df: pd.DataFrame, segment: str, cohort: str,
             return {'Rate': scaled_rate, 'ApproachTag': tag}
         else:
             return {'Rate': 0.0, 'ApproachTag': 'ScaledCohortAvg_NoData_ERROR'}
+
+    elif approach == 'FixedScaleDonor':
+        # FixedScaleDonor: Uses donor's rate at same MOB, scaled by fixed factor
+        # Param1 = donor specification: "COHORT" (same segment) or "SEGMENT:COHORT" (cross-segment)
+        # Param2 = scale factor (e.g., 0.5 means 50% of donor rate)
+        # This gives you the SHAPE of the donor curve at a scaled level
+        if param1 is None or param1 == 'None':
+            return {'Rate': 0.0, 'ApproachTag': 'FixedScaleDonor_NoParam_ERROR'}
+
+        # Parse donor specification - supports "SEGMENT:COHORT" or just "COHORT"
+        param1_str = str(param1)
+        if ':' in param1_str:
+            # Cross-segment format: "SEGMENT:COHORT"
+            parts = param1_str.split(':', 1)
+            donor_segment = parts[0].strip()
+            donor = clean_cohort(parts[1].strip())
+        else:
+            # Same segment format: just "COHORT"
+            donor_segment = segment
+            donor = clean_cohort(param1)
+
+        # Parse scale factor from Param2
+        param2 = methodology.get('Param2')
+        try:
+            scale_factor = float(param2) if param2 and param2 != 'None' else 1.0
+        except (ValueError, TypeError):
+            scale_factor = 1.0
+
+        # Get donor rate at this MOB (using donor_segment)
+        donor_rate = fn_donor_cohort(curves_df, donor_segment, donor, mob, metric_col)
+
+        if donor_rate is not None:
+            scaled_rate = donor_rate * scale_factor
+            tag = f'FixedScaleDonor:{donor_segment}/{donor}(x{scale_factor:.2f})'
+            return {'Rate': scaled_rate, 'ApproachTag': tag}
+        else:
+            return {'Rate': 0.0, 'ApproachTag': f'FixedScaleDonor_NoData_ERROR:{donor_segment}/{donor}@MOB{mob}'}
 
     else:
         return {'Rate': 0.0, 'ApproachTag': f'UnknownApproach_ERROR:{approach}'}
