@@ -1,7 +1,7 @@
 Segment,Cohort,Metric,MOB_Start,MOB_End,Approach,Param1,Param2,Explanation
-NRP-S,ALL,Coll_Principal,0,12,DonorCohort,202405.0,,Young-donor
-NRP-S,ALL,Coll_Principal,13,36,CohortAvg,6.0,,Mid-6mo avg
-NRP-S,ALL,Coll_Principal,37,999,CohortAvg,6.0,,Mature-6mo
+NRP-S,ALL,Coll_Principal,0,12,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
+NRP-S,ALL,Coll_Principal,13,36,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
+NRP-S,ALL,Coll_Principal,37,999,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
 NRP-L,ALL,Coll_Interest,0,12,DonorCohort,202405.0,,Young-donor
 NRP-L,ALL,Coll_Interest,13,999,CohortAvg,6.0,,Mid/mature-6mo
 NRP-M,ALL,InterestRevenue,0,12,DonorCohort,202405.0,,Young-donor
@@ -11,11 +11,11 @@ NRP-M,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
 NRP-M,ALL,WO_DebtSold,0,999,SegMedian,,,Portfolio decision
 NRP-M,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
 NRP-M,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
-NON PRIME,ALL,Coll_Principal,0,12,DonorCohort,202404.0,,Young-donor
-NON PRIME,ALL,Coll_Principal,13,36,CohortAvg,6.0,,Mid-6mo avg
-NON PRIME,ALL,Coll_Principal,37,999,CohortAvg,6.0,,Mature-6mo
-NON PRIME,ALL,Coll_Interest,0,12,DonorCohort,202404.0,,Young-donor
-NON PRIME,ALL,Coll_Interest,13,999,CohortAvg,6.0,,Mid/mature-6mo
+NON PRIME,ALL,Coll_Principal,0,12,ScaledCohortAvg,6.0,0.78,Scale down to match budget coll rate
+NON PRIME,ALL,Coll_Principal,13,36,ScaledCohortAvg,6.0,0.78,Scale down to match budget coll rate
+NON PRIME,ALL,Coll_Principal,37,999,ScaledCohortAvg,6.0,0.78,Scale down to match budget coll rate
+NON PRIME,ALL,Coll_Interest,0,12,ScaledCohortAvg,6.0,0.78,Scale down to match budget coll rate
+NON PRIME,ALL,Coll_Interest,13,999,ScaledCohortAvg,6.0,0.78,Scale down to match budget coll rate
 NON PRIME,ALL,InterestRevenue,0,12,DonorCohort,202404.0,,Young-donor
 NON PRIME,ALL,InterestRevenue,13,36,CohortTrend,6.0,,Mid-trend
 NON PRIME,ALL,InterestRevenue,37,999,CohortAvg,6.0,,Mature-flat
@@ -23,11 +23,11 @@ NON PRIME,ALL,WO_Other,0,999,CohortAvg,12.0,,Rare-12mo
 NON PRIME,ALL,WO_DebtSold,0,999,SegMedian,,,Portfolio decision
 NON PRIME,ALL,Debt_Sale_Coverage_Ratio,0,999,Manual,0.785,,DS coverage
 NON PRIME,ALL,Debt_Sale_Proceeds_Rate,0,999,Manual,0.24,,Proceeds 24p
-PRIME,ALL,Coll_Principal,0,12,DonorCohort,202405.0,,Young-donor
-PRIME,ALL,Coll_Principal,13,36,CohortAvg,6.0,,Mid-6mo avg
-PRIME,ALL,Coll_Principal,37,999,CohortAvg,6.0,,Mature-6mo
-PRIME,ALL,Coll_Interest,0,12,DonorCohort,202405.0,,Young-donor
-PRIME,ALL,Coll_Interest,13,999,CohortAvg,6.0,,Mid/mature-6mo
+PRIME,ALL,Coll_Principal,0,12,ScaledCohortAvg,6.0,0.60,Scale down to match budget coll rate
+PRIME,ALL,Coll_Principal,13,36,ScaledCohortAvg,6.0,0.60,Scale down to match budget coll rate
+PRIME,ALL,Coll_Principal,37,999,ScaledCohortAvg,6.0,0.60,Scale down to match budget coll rate
+PRIME,ALL,Coll_Interest,0,12,ScaledCohortAvg,6.0,0.60,Scale down to match budget coll rate
+PRIME,ALL,Coll_Interest,13,999,ScaledCohortAvg,6.0,0.60,Scale down to match budget coll rate
 PRIME,ALL,InterestRevenue,0,12,DonorCohort,202405.0,,Young-donor
 PRIME,ALL,InterestRevenue,13,36,CohortTrend,6.0,,Mid-trend
 PRIME,ALL,InterestRevenue,37,999,CohortAvg,6.0,,Mature-flat
@@ -142,11 +142,11 @@ PRIME,202504,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
 PRIME,202507,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
 PRIME,202508,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
 PRIME,202509,Total_Coverage_Ratio,0,999,CohortAvg,6.0,,
-NRP-M,ALL,Coll_Principal,0,12,DonorCohort,202405.0,,Young-donor
-NRP-M,ALL,Coll_Principal,13,36,CohortAvg,6.0,,Mid-6mo avg
-NRP-M,ALL,Coll_Principal,37,999,CohortAvg,6.0,,Mature-6mo
-NRP-M,ALL,Coll_Interest,0,12,DonorCohort,202405.0,,Young-donor
-NRP-M,ALL,Coll_Interest,13,999,CohortAvg,6.0,,Mid/mature-6mo
+NRP-M,ALL,Coll_Principal,0,12,ScaledCohortAvg,6.0,0.72,Scale down to match budget coll rate
+NRP-M,ALL,Coll_Principal,13,36,ScaledCohortAvg,6.0,0.72,Scale down to match budget coll rate
+NRP-M,ALL,Coll_Principal,37,999,ScaledCohortAvg,6.0,0.72,Scale down to match budget coll rate
+NRP-M,ALL,Coll_Interest,0,12,ScaledCohortAvg,6.0,0.72,Scale down to match budget coll rate
+NRP-M,ALL,Coll_Interest,13,999,ScaledCohortAvg,6.0,0.72,Scale down to match budget coll rate
 NRP-L,ALL,Coll_Interest,0,12,DonorCohort,202405.0,,Young-donor
 NRP-L,ALL,Coll_Interest,13,999,CohortAvg,6.0,,Mid/mature-6mo
 NRP-L,ALL,Coll_Principal,0,12,DonorCohort,202405.0,,Young-donor
