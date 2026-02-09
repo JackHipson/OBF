@@ -2,6 +2,9 @@ Segment,Cohort,Metric,MOB_Start,MOB_End,Approach,Param1,Param2,Explanation
 NRP-S,ALL,Coll_Principal,0,12,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
 NRP-S,ALL,Coll_Principal,13,36,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
 NRP-S,ALL,Coll_Principal,37,999,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
+NRP-S,ALL,Coll_Interest,0,12,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
+NRP-S,ALL,Coll_Interest,13,36,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
+NRP-S,ALL,Coll_Interest,37,999,ScaledCohortAvg,6.0,1.08,Scale to match budget coll rate
 NRP-L,ALL,Coll_Interest,0,12,DonorCohort,202405.0,,Young-donor
 NRP-L,ALL,Coll_Interest,13,999,CohortAvg,6.0,,Mid/mature-6mo
 NRP-M,ALL,InterestRevenue,0,12,DonorCohort,202405.0,,Young-donor
