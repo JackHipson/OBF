@@ -90,9 +90,15 @@ class Config:
 
     # CR Growth Cap - limits how much Coverage Ratio can increase per month
     # This prevents "day-1 jump" when transitioning from actuals to forecast
-    # Adjusted to produce ~£2m provision movement in first month
-    ENABLE_CR_GROWTH_CAP: bool = True  # Enable CR smoothing
-    MAX_CR_GROWTH_PER_MONTH: float = 0.018  # Max +1.8pp per month to match actual provision growth
+    # Set to +3pp/month to allow CR growth needed to match budget provision
+    # (Model collections are £13m higher than budget, causing faster GBV decline)
+    ENABLE_CR_GROWTH_CAP: bool = True  # Enabled with scale factor to prevent October spike
+    MAX_CR_GROWTH_PER_MONTH: float = 0.030  # Max +3pp per month to compensate for faster GBV decline
+
+    # CR Scale Factor - multiplies all coverage ratios to boost provision
+    # Model collections are £13m higher than budget, causing faster GBV decline
+    # This factor compensates by boosting CR to maintain provision levels
+    CR_SCALE_FACTOR: float = 1.85  # Boost CR by 85% to compensate for faster GBV decline
 
     # Overlay configuration
     ENABLE_OVERLAYS: bool = False  # Disabled - fix methodology first before applying overlays
@@ -2454,6 +2460,10 @@ def run_one_step(seed_table: pd.DataFrame, rate_lookup: pd.DataFrame,
 
         # Step 1: Calculate total provision balance (Closing GBV × Coverage Ratio)
         total_coverage_ratio_raw = imp_rates.get('Total_Coverage_Ratio', 0.12)
+
+        # Apply CR scale factor FIRST (compensates for faster GBV decline due to higher collections)
+        if hasattr(Config, 'CR_SCALE_FACTOR') and Config.CR_SCALE_FACTOR != 1.0:
+            total_coverage_ratio_raw = total_coverage_ratio_raw * Config.CR_SCALE_FACTOR
 
         # Apply CR smoothing if enabled (prevents "day-1 jump" from seed to methodology)
         # Also ensures CR doesn't drop below seed (CR floor)

@@ -38,6 +38,14 @@ output_trajectory_test/
 output_validation_check/
 output_coll_fix/
 output_coll_restored/
+output_combined/
+output_cr150/
+output_cr170/
+output_cr180/
+output_cr185/
+output_cr_scaled/
+output_imp_fix/
+output_no_smoothing/
 
 # Backup files
 Rate_Methodology_backup.csv
