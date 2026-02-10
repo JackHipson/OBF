@@ -1,0 +1,35 @@
+================================================================================================================================================================
+COMPREHENSIVE ANALYSIS: BB FORECAST vs TOTAL BOOK ACTUALS
+Forecast Baseline Outputs v3.6 (new collections & impairment).xlsx
+Analysis generated: 2026-02-10 14:23:16
+================================================================================================================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This analysis compares the Back Book (BB) forecast against Total Book actuals to assess
+the reasonableness of the BB forecast impairment rates, revenue projections, and GBV trajectory.
+
+KEY FINDINGS:
+
+1. OVERALL IMPAIRMENT: BB forecast (-0.52% of GBV) is 58bps lower than Total Book (-1.10%)
+   - This is reasonable if front book has worse credit performance
+   - Non Prime segment: CONSISTENT pattern (BB lower than Total)
+   - Near Prime segments: CONCERNING - BB shows HIGHER impairment than Total ⚠️
+   - Prime segment: REASONABLE - showing provision releases
+
+2. REVENUE PROJECTIONS: BB revenue rate (1.92-2.19%) is 20-40bps lower than Total Book (2.15-2.42%)
+   - This is EXPECTED and REASONABLE for mature back book
+
+3. GBV TRAJECTORY: BB running off at 4-5% per month
+   - Consistent with mature portfolio behavior
+   - £270m (Oct 25) declining to £200m (Mar 26) = -26% over 6 months
+
+4. RECOMMENDED ACTIONS:
+   ⚠️ CRITICAL: Review Near Prime segment impairment methodology
+   - Near Prime Small: BB impairment 4x higher than Total Book (-0.55% vs -0.13%)
+   - Near Prime Medium: BB impairment 2x higher than Total Book (-0.54% vs -0.29%)
+   - This pattern is counterintuitive and requires immediate validation
+
+CONFIDENCE ASSESSMENT: MEDIUM (0.65) - requires Near Prime validation before board reporting
+

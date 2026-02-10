@@ -1,0 +1,19 @@
+ALL SHEETS IN WORKBOOK:
+================================================================================
+
+ 1. forecast vs actuals
+ 2. forecast vs budget
+ 3. README
+ 4. 1_Actuals_Data
+ 5. 2_Historical_Rates
+ 6. 3_Extended_Curves
+ 7. 4_Methodology_Applied
+ 8. 5_Forecast_Output
+ 9. 6_Combined_View
+10. coverage ratio curves
+11. 7_Rate_Methodology_Rules
+12. 9_Summary
+13. 10_Details
+14. 11_Impairment
+15. 12_Reconciliation
+16. 13_Validation

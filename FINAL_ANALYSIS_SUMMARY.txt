@@ -1,0 +1,277 @@
+================================================================================
+FORECAST BASELINE OUTPUTS v3.6 - COMPREHENSIVE ANALYSIS SUMMARY
+================================================================================
+
+PREPARED FOR: Jack Hipson
+DATE: 2026-02-10
+FILE ANALYZED: /home/user/OBF/Forecast Baseline Outputs v3.6 (new collections & impairment).xlsx
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+This workbook contains loan portfolio forecasts from October 2025 to December 2028,
+with 9 months of actual data (Jan-Sep 2025) for comparison. The forecast includes
+detailed cohort-level projections across 8 key metrics and 5 customer segments.
+
+Total Sheets: 16
+Core Metrics: 8 (GBV, Collections, Interest, Impairment)
+Customer Segments: 5 (NON PRIME aggregate + 4 sub-segments)
+Forecast Period: 48 months (Jan 2025 - Dec 2028)
+Actuals: 9 months | Forecast: 39 months
+
+================================================================================
+STEP 1: ALL SHEET NAMES (16 SHEETS)
+================================================================================
+
+   1. forecast vs actuals     - Main comparison sheet (Actuals vs Forecast)
+   2. forecast vs budget       - Forecast compared to budget
+   3. README                   - Sheet documentation
+   4. 1_Actuals_Data          - 7,239 rows of raw historical data
+   5. 2_Historical_Rates      - 1,564 rows of aggregated historical rates
+   6. 3_Extended_Curves       - 5,308 rows of extended rate curves
+   7. 4_Methodology_Applied   - 3,705 rows showing which methodology used
+   8. 5_Forecast_Output       - 3,705 rows of forecast with rates
+   9. 6_Combined_View         - 10,944 rows of actuals + forecast
+  10. coverage ratio curves   - 49 rows of coverage ratio trends
+  11. 7_Rate_Methodology_Rules - 166 rows of methodology rules
+  12. 9_Summary               - 195 rows of monthly aggregates
+  13. 10_Details              - 3,705 rows of detailed forecast
+  14. 11_Impairment           - 3,705 rows of provision calculations
+  15. 12_Reconciliation       - 3,705 rows of GBV reconciliation
+  16. 13_Validation           - 6 rows of quality checks
+
+================================================================================
+STEP 2 & 3: FORECAST VS ACTUALS & BUDGET STRUCTURE
+================================================================================
+
+SHEET STRUCTURE:
+  Row 0: Date headers (2025-01 through 2028-12)
+  Row 1: Empty
+  Row 2: "ForecastMonth" marker at column 16 (Oct 2025)
+  Row 3: Column labels ("Values", "Segment", and dates)
+  Rows 4+: Data rows
+
+COLUMN STRUCTURE:
+  Columns 0-6:   Empty/metadata
+  Columns 7-15:  ACTUALS (Jan 2025 - Sep 2025) - 9 months
+  Columns 16-54: FORECAST (Oct 2025 - Dec 2028) - 39 months
+  Column 14:     "Values" - metric names
+  Column 15:     "Segment" - customer segments
+
+ACTUALS vs FORECAST SPLIT:
+  - Actuals period: Jan 2025 - Sep 2025 (9 months)
+  - Forecast starts: October 2025 (marked by "ForecastMonth" in row 2, col 16)
+  - Forecast ends: December 2028
+  - Total months: 48
+
+================================================================================
+KEY METRICS (8 metrics x 5 segments = 40 core data rows)
+================================================================================
+
+1. Sum of OpeningGBV           - Opening Gross Book Value (loan portfolio size)
+2. Sum of Coll_Principal       - Principal collections (negative = cash in)
+3. Sum of Coll_Interest        - Interest collections (negative = cash in)
+4. Sum of ClosingGBV           - Closing Gross Book Value
+5. Sum of ClosingNBV           - Closing Net Book Value (after provisions)
+6. Sum of InterestRevenue      - Interest revenue recognized
+7. Sum of Gross_Impairment_ExcludingDS - Gross impairment charge
+8. Sum of Net_Impairment       - Net impairment after recoveries
+
+CUSTOMER SEGMENTS:
+
+1. NON PRIME     - Aggregate of all non-prime segments
+2. NRP-L         - Non-Prime Low risk
+3. NRP-M         - Non-Prime Medium risk
+4. NRP-S         - Non-Prime Small/other
+5. PRIME         - Prime customers
+
+================================================================================
+STEP 4: OTHER SHEETS DETAILED SUMMARY
+================================================================================
+
+README (13 rows):
+  - Documentation of all sheets and their purposes
+  - Use this as a reference guide for the workbook
+
+1_Actuals_Data (7,239 rows x 20 columns):
+  - Raw historical actual data by CalendarMonth, Segment, Cohort, MOB
+  - Columns: OpeningGBV, Coll_Principal, Coll_Interest, InterestRevenue,
+             WO_DebtSold, WO_Other, ClosingGBV, rates
+  - Source data for building historical rate curves
+
+2_Historical_Rates (1,564 rows x 12 columns):
+  - Aggregated historical rates by Segment, Cohort, MOB
+  - Key rates: Coll_Principal_Rate, Coll_Interest_Rate, InterestRevenue_Rate
+  - Used as baseline for forecasting
+
+3_Extended_Curves (5,308 rows x 12 columns):
+  - Extended rate curves using various methodologies
+  - Shows how curves are extended beyond historical data points
+  - Includes both historical and extrapolated rates
+
+4_Methodology_Applied (3,705 rows x 19 columns):
+  - Documents which forecasting methodology was applied to each cohort/MOB
+  - Approaches: CohortTrend, DonorCohort, CohortAvg, SegMedian, Manual
+  - Critical for understanding forecast assumptions
+
+5_Forecast_Output (3,705 rows x 62 columns):
+  - Final forecast values with rates and approaches documented
+  - One row per cohort/MOB combination
+  - Contains: OpeningGBV, rates, methodologies, calculated collections/revenue
+
+6_Combined_View (10,944 rows x 19 columns):
+  - Combined actuals + forecast for time series analysis
+  - Includes "DataType" column (Actual vs Forecast)
+  - Best sheet for creating charts and trends
+
+coverage ratio curves (49 rows x 6 columns):
+  - Coverage ratio trends by MOB (Months on Books)
+  - Used for smoothing impairment provision curves
+  - Compare Actual vs Forecast coverage ratios
+
+7_Rate_Methodology_Rules (166 rows x 9 columns):
+  - The methodology rules reference
+  - Defines which approach to use for each Segment/Cohort/Metric/MOB range
+  - Parameters for each approach (e.g., donor cohort, lookback months)
+
+9_Summary (195 rows x 12 columns):
+  - Monthly aggregated forecast summary
+  - High-level view: OpeningGBV, Revenue, Collections, Impairment by month/segment
+  - Includes Total_Coverage_Ratio for each month
+  - BEST SHEET FOR EXECUTIVE REPORTING
+
+10_Details (3,705 rows x 62 columns):
+  - Full cohort-level detail (same structure as 5_Forecast_Output)
+  - Use for detailed analysis and audit trails
+
+11_Impairment (3,705 rows x 27 columns):
+  - Impairment provision calculations
+  - Columns: Total_Coverage_Ratio, Provision_Balance, Provision_Movement
+  - Shows how provisions flow through the forecast
+
+12_Reconciliation (3,705 rows x 18 columns):
+  - GBV reconciliation checks
+  - Opening + Revenue - Collections = Closing
+  - Quality assurance for forecast calculations
+
+13_Validation (6 rows x 6 columns):
+  - Validation checks and quality assurance
+  - Shows: Check name, Total_Rows, Passed, Failed, Pass_Rate, Status
+  - REVIEW THIS FIRST to confirm data quality
+
+================================================================================
+STEP 5: FORECAST VS ACTUALS - SAMPLE DATA
+================================================================================
+
+OPENING GBV (£) - JAN TO DEC 2025
+(Jan-Sep = ACTUALS | Oct-Dec = FORECAST)
+
+Segment      2025-10        2025-11        2025-12
+-------------------------------------------------------
+NON PRIME    117,689,684    110,675,448    103,791,468
+NRP-L          5,517,435      5,356,135      5,197,881
+NRP-M        106,116,575    102,756,249     99,438,312
+NRP-S         43,014,490     41,295,870     39,568,702
+PRIME          3,643,667      3,278,581      2,900,649
+
+COLLECTIONS (Principal + Interest) FOR NON PRIME:
+
+Month     Opening GBV    Principal      Interest      Total Colls   Coll Rate %
+----------------------------------------------------------------------------------
+2025-10   117,689,684    -6,983,274    -3,431,661    -10,414,935      8.85%
+2025-11   110,675,448    -6,637,764    -3,279,252     -9,917,016      8.96%
+2025-12   103,791,468    -6,434,360    -2,937,253     -9,371,613      9.03%
+
+Note: Collections are negative (cash inflows)
+Collection Rate = |Total Collections| / Opening GBV
+
+================================================================================
+KEY RATIOS DERIVABLE FROM THE DATA
+================================================================================
+
+1. Collections Rate = (Coll_Principal + Coll_Interest) / OpeningGBV
+   - Measures cash collection efficiency
+   - Typically 8-10% per month for this portfolio
+
+2. Coverage Ratio = Provision Balance / GBV
+   - Available in 11_Impairment sheet
+   - Shows impairment provision as % of loan book
+
+3. Impairment Rate = Net_Impairment / OpeningGBV
+   - Monthly provision charge as % of portfolio
+   - Can be volatile month-to-month
+
+4. Interest Yield = InterestRevenue / OpeningGBV
+   - Monthly interest yield
+   - Typically 2-4% per month for subprime lending
+
+5. GBV Runoff = (ClosingGBV / OpeningGBV) - 1
+   - Portfolio decay rate
+   - Should be consistent with collections + write-offs
+
+================================================================================
+DATA QUALITY NOTES
+================================================================================
+
+1. ADDITIONAL DATA SECTIONS:
+   - After row 44 in "forecast vs actuals", there are additional comparison
+     sections with numeric values in Metric/Segment columns
+   - These appear to be variance analysis or ratio calculations
+   - Suggests multiple comparison views in single sheet
+
+2. RECOMMENDATIONS:
+   - Review '13_Validation' sheet first for any data quality issues
+   - Use '9_Summary' for high-level monthly analysis
+   - Use '6_Combined_View' for time series charts
+   - Check 'coverage ratio curves' for impairment smoothing approach
+
+3. FILES CREATED FOR ANALYSIS:
+   - analysis_forecast_vs_actuals_structured.csv (681 rows x 50 cols)
+   - analysis_forecast_vs_budget.csv (100 rows sample)
+   - analysis_all_sheets_summary.csv (sheet dimensions)
+   - COMPREHENSIVE_ANALYSIS_REPORT.txt (detailed findings)
+   - FINAL_ANALYSIS_SUMMARY.txt (this file)
+
+================================================================================
+NEXT STEPS FOR ANALYSIS
+================================================================================
+
+1. IMMEDIATE REVIEW:
+   - Check 13_Validation sheet for any failed checks
+   - Review coverage ratio curves for smoothing approach
+   - Compare 9_Summary totals to board pack expectations
+
+2. FORECAST QUALITY:
+   - Review 4_Methodology_Applied to understand forecast assumptions
+   - Check for reasonable MOB progression in extended curves
+   - Validate collection rates are consistent with historical trends
+
+3. VARIANCE ANALYSIS:
+   - Use forecast vs actuals sheet to identify variances
+   - Focus on material movements in GBV, collections, and impairment
+   - Investigate any unusual monthly patterns
+
+4. DOCUMENTATION:
+   - Document key assumptions from 7_Rate_Methodology_Rules
+   - Note any manual overrides or adjustments
+   - Prepare commentary for board reporting
+
+================================================================================
+CONTACT & NOTES
+================================================================================
+
+All analysis files are located in:  /home/user/OBF/
+
+Original file:                      Forecast Baseline Outputs v3.6 (new collections & impairment).xlsx
+Analysis performed by:              Claude (Data Analysis Specialist)
+Date:                               2026-02-10
+
+For questions about methodology, refer to:
+  - README sheet in the workbook
+  - 7_Rate_Methodology_Rules for approach details
+  - 4_Methodology_Applied for specific cohort assumptions
+
+================================================================================
+END OF ANALYSIS
+================================================================================

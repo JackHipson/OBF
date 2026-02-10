@@ -1,0 +1,122 @@
+======================================================================================================================================================
+FORECAST BASELINE OUTPUTS v3.6 - COMPLETE ANALYSIS
+======================================================================================================================================================
+
+### STEP 1: ALL SHEET NAMES (16 sheets total) ###
+
+   1. forecast vs actuals
+   2. forecast vs budget
+   3. README
+   4. 1_Actuals_Data
+   5. 2_Historical_Rates
+   6. 3_Extended_Curves
+   7. 4_Methodology_Applied
+   8. 5_Forecast_Output
+   9. 6_Combined_View
+  10. coverage ratio curves
+  11. 7_Rate_Methodology_Rules
+  12. 9_Summary
+  13. 10_Details
+  14. 11_Impairment
+  15. 12_Reconciliation
+  16. 13_Validation
+
+
+### STEP 2 & 3: FORECAST VS ACTUALS & BUDGET STRUCTURE ###
+
+Both sheets have similar structure:
+  - Columns 0-6: Empty/metadata columns
+  - Column 7-54: Monthly data (Jan 2025 to Dec 2028)
+  - Column 14: 'Values' (metric names)
+  - Column 15: 'Segment' (customer segments)
+
+  ACTUALS period: Jan 2025 - Sep 2025 (columns 7-15, 9 months)
+  FORECAST period: Oct 2025 - Dec 2028 (columns 16-54, 39 months)
+  ForecastMonth marker: Row 2, Column 16 indicates forecast start (Oct 2025)
+
+
+### KEY METRICS IN FORECAST VS ACTUALS ###
+
+  - Sum of OpeningGBV
+  - Sum of Coll_Principal
+  - Sum of Coll_Interest
+  - Sum of ClosingGBV
+  - Sum of ClosingNBV
+  - Sum of InterestRevenue
+  - Sum of Gross_Impairment_ExcludingDS
+  - Sum of Net_Impairment
+
+
+### CUSTOMER SEGMENTS ###
+
+  - NON PRIME (aggregate)
+  - NRP-L (low risk)
+  - NRP-M (medium risk)
+  - NRP-S (small/other)
+  - PRIME
+
+
+### STEP 4: ALL OTHER SHEETS SUMMARY ###
+
+  README                        : 13 rows - Documentation of all sheets and their purposes
+  1_Actuals_Data                : 7,239 rows - Raw historical actual data by cohort/MOB
+  2_Historical_Rates            : 1,564 rows - Aggregated historical rates by cohort/MOB
+  3_Extended_Curves             : 5,308 rows - Extended rate curves using various methodologies
+  4_Methodology_Applied         : 3,705 rows - Which forecasting methodology was applied to each cohort/MOB
+  5_Forecast_Output             : 3,705 rows - Final forecast values with rates and approaches
+  6_Combined_View               : 10,944 rows - Combined actuals + forecast for charting
+  coverage ratio curves         : 49 rows - Coverage ratio trends by MOB
+  7_Rate_Methodology_Rules      : 166 rows - The methodology rules reference
+  9_Summary                     : 195 rows - Monthly aggregated forecast summary
+  10_Details                    : 3,705 rows - Full cohort detail (same structure as 5_Forecast_Output)
+  11_Impairment                 : 3,705 rows - Impairment provision calculations
+  12_Reconciliation             : 3,705 rows - GBV reconciliation checks
+  13_Validation                 : 6 rows - Validation checks and quality assurance
+
+
+### STEP 5: FORECAST VS ACTUALS DETAILED FINDINGS ###
+
+
+1. DATA SPLIT:
+   - Months with ACTUAL data: 9 months (Jan-Sep 2025)
+   - Months with FORECAST data: 39 months (Oct 2025-Dec 2028)
+   - Total forecast period: 48 months
+
+2. METRICS STRUCTURE:
+   - Each of the 8 key metrics has data for:
+     • NON PRIME (aggregate)
+     • 4 sub-segments (NRP-L, NRP-M, NRP-S, PRIME)
+   - Total: 40 core data rows (8 metrics x 5 segments)
+
+3. ADDITIONAL DATA SECTIONS:
+   - After row 44, there appear to be additional comparison sections
+   - These contain variance analysis and ratio calculations
+   - Many rows have numeric values in both Metric and Segment columns
+   - This suggests FORECAST vs ACTUALS comparison metrics
+
+4. KEY RATIOS DERIVABLE:
+   - Collections Rate = (Coll_Principal + Coll_Interest) / OpeningGBV
+   - Coverage Ratio = Provision Balance / GBV
+   - Impairment Rate = Net_Impairment / OpeningGBV
+   - Interest Yield = InterestRevenue / OpeningGBV
+
+
+### FILES CREATED FOR DETAILED REVIEW ###
+
+  1. /home/user/OBF/analysis_sheet_list.txt
+  2. /home/user/OBF/analysis_forecast_vs_actuals_structured.csv (681 rows x 50 cols)
+  3. /home/user/OBF/analysis_forecast_vs_budget.csv (100 rows sample)
+  4. /home/user/OBF/analysis_all_sheets_summary.csv (sheet dimensions)
+
+
+### RECOMMENDATIONS FOR FURTHER ANALYSIS ###
+
+  1. Review the structured CSV files for detailed month-by-month values
+  2. Focus on '9_Summary' sheet for high-level monthly aggregates
+  3. Use '6_Combined_View' for time series analysis and charting
+  4. Check '13_Validation' sheet for any data quality issues
+  5. Review 'coverage ratio curves' sheet for impairment smoothing
+
+======================================================================================================================================================
+END OF ANALYSIS
+======================================================================================================================================================
