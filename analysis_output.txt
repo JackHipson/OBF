@@ -1,0 +1,527 @@
+/usr/local/lib/python3.11/dist-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Slicer List extension is not supported and will be removed
+  warn(msg)
+========================================================================================================================
+SECTION 1: BB FORECAST DATA (Oct 2025 - Sep 2026)
+========================================================================================================================
+
+Forecast months: ['2025-10-31', '2025-11-30', '2025-12-31', '2026-01-31', '2026-02-28', '2026-03-31', '2026-04-30', '2026-05-31', '2026-06-30', '2026-07-31', '2026-08-31', '2026-09-30']
+
+--- BB Forecast: Monthly Totals (All Segments) ---
+
+Metric                        2025-10-31     2025-11-30     2025-12-31     2026-01-31     2026-02-28     2026-03-31     2026-04-30     2026-05-31     2026-06-30     2026-07-31     2026-08-31     2026-09-30
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OpeningGBV                       275.98m        263.36m        250.90m        236.79m        225.22m        214.12m        200.99m        190.99m        181.54m        169.69m        161.56m        154.16m
+Coll_Principal                   -13.34m        -12.81m        -12.49m        -11.94m        -11.42m        -11.01m        -10.27m         -9.71m         -9.21m         -8.38m         -7.67m         -7.13m
+Coll_Interest                     -5.21m         -5.11m         -4.66m         -4.29m         -4.00m         -3.70m         -3.45m         -3.25m         -3.09m         -2.89m         -2.76m         -2.67m
+ClosingGBV                       263.36m        250.90m        236.79m        225.22m        214.12m        200.99m        190.99m        181.54m        169.69m        161.56m        154.16m        143.97m
+ClosingNBV                       234.83m        221.00m        206.51m        194.21m        182.59m        169.82m        159.67m        150.18m        139.16m        131.14m        123.91m        114.81m
+InterestRevenue                    6.00m          5.52m          5.12m          4.72m          4.38m          4.07m          3.78m          3.58m          3.40m          3.20m          3.08m          2.98m
+Gross_Impairment                  -1.91m         -1.38m         -1.98m         -0.75m         -0.53m         -1.55m         -0.16m         -0.05m         -1.44m          0.10m          0.16m         -1.52m
+Net_Impairment                    -1.91m         -1.38m         -1.93m         -0.75m         -0.53m         -1.49m         -0.16m         -0.05m         -1.37m          0.10m          0.16m         -1.43m
+
+
+========================================================================================================================
+SECTION 2: BB FORECAST - KEY METRICS AS % OF OPENING GBV
+========================================================================================================================
+
+Metric                      2025-10-31   2025-11-30   2025-12-31   2026-01-31   2026-02-28   2026-03-31   2026-04-30   2026-05-31   2026-06-30   2026-07-31   2026-08-31   2026-09-30
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Coll_Principal                  -4.83%       -4.86%       -4.98%       -5.04%       -5.07%       -5.14%       -5.11%       -5.09%       -5.07%       -4.94%       -4.74%       -4.62%
+Coll_Interest                   -1.89%       -1.94%       -1.86%       -1.81%       -1.78%       -1.73%       -1.71%       -1.70%       -1.70%       -1.70%       -1.71%       -1.73%
+InterestRevenue                  2.17%        2.10%        2.04%        1.99%        1.94%        1.90%        1.88%        1.87%        1.87%        1.89%        1.91%        1.93%
+Gross_Impairment                -0.69%       -0.52%       -0.79%       -0.32%       -0.23%       -0.73%       -0.08%       -0.03%       -0.79%        0.06%        0.10%       -0.98%
+Net_Impairment                  -0.69%       -0.52%       -0.77%       -0.32%       -0.23%       -0.70%       -0.08%       -0.03%       -0.75%        0.06%        0.10%       -0.93%
+Coverage Ratio                  10.83%       11.92%       12.79%       13.77%       14.73%       15.51%       16.40%       17.28%       17.99%       18.83%       19.63%       20.26%
+
+
+========================================================================================================================
+SECTION 3: ACTUALS (TOTAL BOOK) DATA
+========================================================================================================================
+
+Actuals months available: ['2025-01-31', '2025-02-28', '2025-03-31', '2025-04-30', '2025-05-31', '2025-06-30', '2025-07-31', '2025-08-31', '2025-09-30', '2025-10-31', '2025-11-30', '2025-12-31', '2026-01-31', '2026-02-28', '2026-03-31', '2026-04-30', '2026-05-31', '2026-06-30', '2026-07-31', '2026-08-31', '2026-09-30']
+
+--- Total Book Actuals: Key Metrics (£m) ---
+
+Metric                        2025-01-31     2025-02-28     2025-03-31     2025-04-30     2025-05-31     2025-06-30     2025-07-31     2025-08-31     2025-09-30     2025-10-31     2025-11-30     2025-12-31     2026-01-31     2026-02-28     2026-03-31     2026-04-30     2026-05-31     2026-06-30     2026-07-31     2026-08-31     2026-09-30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Collections_Total                 16.97m         17.49m         17.65m         18.03m         16.96m         18.74m         18.18m         17.47m         19.10m         18.75m         18.10m         19.08m         19.10m            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+TotalColl_incContra               20.74m         21.46m         21.74m         22.04m         20.79m         22.91m         22.98m         21.84m         23.27m         24.29m         21.17m         22.13m         22.08m            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+ClosingGBV                           N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+AvgGBV                           233.60m        238.46m        240.68m        244.52m        253.12m        257.41m        262.91m        272.29m        276.27m        281.62m        290.16m        291.36m            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+ClosingNBV                           N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+AvgNBV                               N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+Revenue                            5.53m          5.14m          5.69m          5.84m          5.96m          6.10m          6.37m          6.55m          6.51m          6.87m          6.81m          7.14m          7.15m            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+GrossImpairment                   -3.15m         -2.65m         -2.25m         -2.33m         -2.49m         -2.86m         -3.18m         -3.05m         -2.84m         -2.30m         -3.53m         -3.67m         -4.43m            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+NetImpairment                        N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+RAM_exclDS                           N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+DebtSaleGain                         N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+RAM_inclDS                           N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A            N/A
+
+--- Total Book Actuals: % Metrics ---
+
+Metric                      2025-01-31   2025-02-28   2025-03-31   2025-04-30   2025-05-31   2025-06-30   2025-07-31   2025-08-31   2025-09-30   2025-10-31   2025-11-30   2025-12-31   2026-01-31   2026-02-28   2026-03-31   2026-04-30   2026-05-31   2026-06-30   2026-07-31   2026-08-31   2026-09-30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Revenue_%AvgGBV                    N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+GrossImp_%AvgGBV                   N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+NetImp_%AvgGBV                     N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+RAM_exclDS_%AvgGBV                 N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+DSGain_%AvgGBV                     N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+RAM_inclDS_%AvgGBV                 N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+
+
+========================================================================================================================
+SECTION 4: COMPARISON - BB FORECAST vs TOTAL BOOK ACTUALS
+========================================================================================================================
+
+--- Checking which months have BOTH BB forecast AND total book actuals ---
+  2025-10-31: BB OpenGBV=276.0m, Actuals AvgGBV=281.6m -> BOTH
+  2025-11-30: BB OpenGBV=263.4m, Actuals AvgGBV=290.2m -> BOTH
+  2025-12-31: BB OpenGBV=250.9m, Actuals AvgGBV=291.4m -> BOTH
+  2026-01-31: BB OpenGBV=236.8m, Actuals AvgGBV=N/A -> BB only
+  2026-02-28: BB OpenGBV=225.2m, Actuals AvgGBV=N/A -> BB only
+  2026-03-31: BB OpenGBV=214.1m, Actuals AvgGBV=N/A -> BB only
+  2026-04-30: BB OpenGBV=201.0m, Actuals AvgGBV=N/A -> BB only
+  2026-05-31: BB OpenGBV=191.0m, Actuals AvgGBV=N/A -> BB only
+  2026-06-30: BB OpenGBV=181.5m, Actuals AvgGBV=N/A -> BB only
+  2026-07-31: BB OpenGBV=169.7m, Actuals AvgGBV=N/A -> BB only
+  2026-08-31: BB OpenGBV=161.6m, Actuals AvgGBV=N/A -> BB only
+  2026-09-30: BB OpenGBV=154.2m, Actuals AvgGBV=N/A -> BB only
+
+Overlap months with both datasets: ['2025-10-31', '2025-11-30', '2025-12-31']
+
+--- KEY COMPARISON: Metrics as % of GBV ---
+
+Metric                         Source       2025-10-31   2025-11-30   2025-12-31
+-------------------------------------------------------------------------------
+Collections % GBV              BB               -6.72%       -6.80%       -6.83%
+                               Actuals           6.66%        6.24%        6.55%
+
+Revenue % GBV                  BB                2.17%        2.10%        2.04%
+                               Actuals             N/A          N/A          N/A
+
+Gross Imp % GBV                BB               -0.69%       -0.52%       -0.79%
+                               Actuals             N/A          N/A          N/A
+
+Net Imp % GBV                  BB               -0.69%       -0.52%       -0.77%
+                               Actuals             N/A          N/A          N/A
+
+
+========================================================================================================================
+SECTION 5: HISTORICAL BB AS % OF TOTAL BOOK (Jan-Sep 2025)
+========================================================================================================================
+
+--- Checking BB Summary Section (rows 49-100) for historical data ---
+  Row 51: Non Prime                                          Jan=None            Sep=None            Oct=-10414935.22    Nov=-9917015.200000001
+  Row 52: Near Prime Small                                   Jan=None            Sep=None            Oct=-2494655.0699999994 Nov=-2461852.0900000003
+  Row 53: Near Prime Medium                                  Jan=None            Sep=None            Oct=-5250278.609999999 Nov=-5136465.58    
+  Row 54: Prime                                              Jan=None            Sep=None            Oct=-390422.42000000004 Nov=-402811.78     
+  Row 55: BB coll + principal collections                    Jan=None            Sep=None            Oct=-18550291.32    Nov=-17918144.650000002
+  Row 57: Non Prime as % of average closing GBV              Jan=None            Sep=None            Oct=-0.09410339311903199 Nov=-0.09248060608940102
+  Row 58: Near Prime Small as % of average closing GBV       Jan=None            Sep=None            Oct=-0.06040931152284327 Nov=-0.06088827343161799
+  Row 59: Near Prime Medium as % of average closing GBV      Jan=None            Sep=None            Oct=-0.04856315645788552 Nov=-0.0482867210227778
+  Row 60: Prime as % of average closing GBV                  Jan=None            Sep=None            Oct=-0.11908274196571332 Nov=-0.13037603602141803
+  Row 62: Non Prime                                          Jan=None            Sep=None            Oct=110675448.3     Nov=103791467.94   
+  Row 63: Near Prime Small                                   Jan=None            Sep=None            Oct=41295869.91     Nov=39568702.239999995
+  Row 64: Near Prime Medium                                  Jan=None            Sep=None            Oct=108112383.81    Nov=104636192.66000001
+  Row 65: Prime                                              Jan=None            Sep=None            Oct=3278581.04      Nov=2900649.3200000003
+  Row 66: BB Closing GBV                                     Jan=None            Sep=None            Oct=263362283.05999997 Nov=250897012.16000003
+  Row 72: Non Prime                                          Jan=None            Sep=None            Oct=110675448.3     Nov=107233458.12   
+  Row 73: Near Prime Small                                   Jan=None            Sep=None            Oct=41295869.91     Nov=40432286.074999996
+  Row 74: Near Prime Medium                                  Jan=None            Sep=None            Oct=108112383.81    Nov=106374288.23500001
+  Row 75: Prime                                              Jan=None            Sep=None            Oct=3278581.04      Nov=3089615.18     
+  Row 76: BB Average GBV                                     Jan=None            Sep=None            Oct=263362283.05999997 Nov=257129647.61   
+  Row 82: Non Prime                                          Jan=None            Sep=None            Oct=93895503.94999999 Nov=86448751.07000002
+  Row 83: Near Prime Small                                   Jan=None            Sep=None            Oct=37560057.66     Nov=35598711.15    
+  Row 84: Near Prime Medium                                  Jan=None            Sep=None            Oct=100689052.22    Nov=96623181.48999998
+  Row 85: Prime                                              Jan=None            Sep=None            Oct=2682770.3500000006 Nov=2326735.8700000006
+  Row 86: BB Closing NBV                                     Jan=None            Sep=None            Oct=234827384.17999998 Nov=220997379.58   
+
+
+========================================================================================================================
+SECTION 6: BB FORECAST BY SEGMENT (Oct-Dec 2025)
+========================================================================================================================
+
+--- NON PRIME ---
+  Metric                        2025-10-31     2025-11-30     2025-12-31
+  Opening GBV (£m)                 117.69m        110.68m        103.79m
+  Closing GBV (£m)                 110.68m        103.79m         95.84m
+  Coll_P + Coll_I (£m)             -10.41m         -9.92m         -9.37m
+  Collections % GBV                  8.85%          8.96%          9.03%
+  Interest Revenue (£m)              3.46m          3.09m          2.80m
+  Revenue % GBV                      2.94%          2.80%          2.70%
+  Gross Impairment (£m)             -0.72m         -0.57m         -1.01m
+  Gross Imp % GBV                   -0.62%         -0.52%         -0.97%
+  Net Impairment (£m)               -0.72m         -0.57m         -0.98m
+  Net Imp % GBV                     -0.62%         -0.52%         -0.94%
+  Coverage Ratio                    15.16%         16.71%         18.06%
+  GBV Decline Rate                  -5.96%         -6.22%         -7.66%
+
+--- NRP-L ---
+  Metric                        2025-10-31     2025-11-30     2025-12-31
+  Opening GBV (£m)                   5.52m          5.36m          5.20m
+  Closing GBV (£m)                   5.36m          5.20m          5.03m
+  Coll_P + Coll_I (£m)              -0.24m         -0.23m         -0.23m
+  Collections % GBV                  4.31%          4.32%          4.51%
+  Interest Revenue (£m)              0.08m          0.07m          0.07m
+  Revenue % GBV                      1.38%          1.36%          1.34%
+  Gross Impairment (£m)             -0.01m         -0.01m         -0.01m
+  Gross Imp % GBV                   -0.18%         -0.17%         -0.16%
+  Net Impairment (£m)               -0.01m         -0.01m         -0.01m
+  Net Imp % GBV                     -0.18%         -0.17%         -0.16%
+  Coverage Ratio                    10.71%         11.21%         11.75%
+  GBV Decline Rate                  -2.92%         -2.95%         -3.17%
+
+--- NRP-M ---
+  Metric                        2025-10-31     2025-11-30     2025-12-31
+  Opening GBV (£m)                 106.12m        102.76m         99.44m
+  Closing GBV (£m)                 102.76m         99.44m         95.71m
+  Coll_P + Coll_I (£m)              -5.01m         -4.91m         -4.78m
+  Collections % GBV                  4.72%          4.77%          4.81%
+  Interest Revenue (£m)              1.66m          1.59m          1.53m
+  Revenue % GBV                      1.56%          1.55%          1.54%
+  Gross Impairment (£m)             -0.88m         -0.58m         -0.68m
+  Gross Imp % GBV                   -0.83%         -0.57%         -0.68%
+  Net Impairment (£m)               -0.88m         -0.58m         -0.67m
+  Net Imp % GBV                     -0.83%         -0.57%         -0.67%
+  Coverage Ratio                     6.67%          7.47%          8.07%
+  GBV Decline Rate                  -3.17%         -3.23%         -3.75%
+
+--- NRP-S ---
+  Metric                        2025-10-31     2025-11-30     2025-12-31
+  Opening GBV (£m)                  43.01m         41.30m         39.57m
+  Closing GBV (£m)                  41.30m         39.57m         37.67m
+  Coll_P + Coll_I (£m)              -2.49m         -2.46m         -2.37m
+  Collections % GBV                  5.80%          5.96%          5.99%
+  Interest Revenue (£m)              0.78m          0.74m          0.70m
+  Revenue % GBV                      1.81%          1.78%          1.76%
+  Gross Impairment (£m)             -0.31m         -0.24m         -0.32m
+  Gross Imp % GBV                   -0.72%         -0.57%         -0.81%
+  Net Impairment (£m)               -0.31m         -0.24m         -0.31m
+  Net Imp % GBV                     -0.72%         -0.57%         -0.79%
+  Coverage Ratio                     9.05%         10.03%         10.92%
+  GBV Decline Rate                  -4.00%         -4.18%         -4.79%
+
+--- PRIME ---
+  Metric                        2025-10-31     2025-11-30     2025-12-31
+  Opening GBV (£m)                   3.64m          3.28m          2.90m
+  Closing GBV (£m)                   3.28m          2.90m          2.54m
+  Coll_P + Coll_I (£m)              -0.39m         -0.40m         -0.39m
+  Collections % GBV                 10.72%         12.29%         13.42%
+  Interest Revenue (£m)              0.03m          0.03m          0.02m
+  Revenue % GBV                      0.70%          0.77%          0.86%
+  Gross Impairment (£m)              0.01m          0.02m          0.03m
+  Gross Imp % GBV                    0.15%          0.66%          1.10%
+  Net Impairment (£m)                0.01m          0.02m          0.03m
+  Net Imp % GBV                      0.15%          0.66%          1.10%
+  Coverage Ratio                    18.17%         19.79%         21.36%
+  GBV Decline Rate                 -10.02%        -11.53%        -12.57%
+
+
+========================================================================================================================
+SECTION 7: PRE-COMPUTED VARIANCES (from sheet)
+========================================================================================================================
+
+--- Scanning variance section (rows 369-450) ---
+  Row 372: Non Prime                                               Oct=None               Nov=0.36m              Dec=1.32m             
+  Row 373: Near Prime Small                                        Oct=None               Nov=0.43m              Dec=0.81m             
+  Row 374: Near Prime Medium                                       Oct=None               Nov=-0.44m             Dec=-0.05m            
+  Row 375: Prime                                                   Oct=None               Nov=-0.17m             Dec=-0.14m            
+  Row 376: BB total collections                                    Oct=None               Nov=0.19m              Dec=1.93m             
+  Row 377: as % of average closing GBV                             Oct=None               Nov=0.00m              Dec=0.00m             
+  Row 378: Non Prime as % of average closing GBV                   Oct=None               Nov=-0.0107            Dec=-0.0083           
+  Row 379: Near Prime Small as % of average closing GBV            Oct=None               Nov=0.0053             Dec=0.0107            
+  Row 380: Near Prime Medium as % of average closing GBV           Oct=None               Nov=-0.0083            Dec=-0.0073           
+  Row 381: Prime as % of average closing GBV                       Oct=None               Nov=None               Dec=None              
+  Row 383: Non Prime                                               Oct=None               Nov=None               Dec=None              
+  Row 384: Near Prime Small                                        Oct=None               Nov=None               Dec=None              
+  Row 385: Near Prime Medium                                       Oct=None               Nov=None               Dec=None              
+  Row 386: Prime                                                   Oct=None               Nov=None               Dec=None              
+  Row 387: BB Closing GBV                                          Oct=None               Nov=None               Dec=None              
+  Row 388: Non Prime Mix                                           Oct=None               Nov=None               Dec=None              
+  Row 389: Near Prime Small Mix                                    Oct=None               Nov=None               Dec=None              
+  Row 390: Near Prime Medium Mix                                   Oct=None               Nov=None               Dec=None              
+  Row 391: Prime Mix                                               Oct=None               Nov=None               Dec=None              
+  Row 393: Non Prime                                               Oct=None               Nov=-18.41m            Dec=-25.15m           
+  Row 394: Near Prime Small                                        Oct=None               Nov=-3.26m             Dec=-5.45m            
+  Row 395: Near Prime Medium                                       Oct=None               Nov=-11.28m            Dec=-16.77m           
+  Row 396: Prime                                                   Oct=None               Nov=-0.07m             Dec=-0.15m            
+  Row 397: BB Average GBV                                          Oct=None               Nov=-33.03m            Dec=-47.52m           
+  Row 398: Non Prime Mix                                           Oct=None               Nov=None               Dec=None              
+  Row 399: Near Prime Small Mix                                    Oct=None               Nov=None               Dec=None              
+  Row 400: Near Prime Medium Mix                                   Oct=None               Nov=None               Dec=None              
+  Row 401: Prime Mix                                               Oct=None               Nov=None               Dec=None              
+  Row 403: Non Prime                                               Oct=None               Nov=None               Dec=None              
+  Row 404: Near Prime Small                                        Oct=None               Nov=None               Dec=None              
+  Row 405: Near Prime Medium                                       Oct=None               Nov=None               Dec=None              
+  Row 406: Prime                                                   Oct=None               Nov=None               Dec=None              
+  Row 407: BB Closing NBV                                          Oct=None               Nov=None               Dec=None              
+  Row 408: Non Prime Mix                                           Oct=None               Nov=None               Dec=None              
+  Row 409: Near Prime Small Mix                                    Oct=None               Nov=None               Dec=None              
+  Row 410: Near Prime Medium Mix                                   Oct=None               Nov=None               Dec=None              
+  Row 411: Prime Mix                                               Oct=None               Nov=None               Dec=None              
+  Row 413: Non Prime                                               Oct=None               Nov=None               Dec=None              
+  Row 414: Near Prime Small                                        Oct=None               Nov=None               Dec=None              
+  Row 415: Near Prime Medium                                       Oct=None               Nov=None               Dec=None              
+  Row 416: Prime                                                   Oct=None               Nov=None               Dec=None              
+  Row 417: BB Average NBV                                          Oct=None               Nov=None               Dec=None              
+  Row 418: Non Prime Mix                                           Oct=None               Nov=compare to impairment as % of the book Dec=compare to impairment as % of the book
+  Row 419: Near Prime Small Mix                                    Oct=None               Nov=this gives us what BB% impairment should be  Dec=this gives us what BB% impairment should be 
+  Row 420: Near Prime Medium Mix                                   Oct=None               Nov=None               Dec=None              
+  Row 421: Prime Mix                                               Oct=None               Nov=None               Dec=None              
+  Row 423: Non Prime                                               Oct=None               Nov=-1.08m             Dec=-1.54m            
+  Row 424: Near Prime Small                                        Oct=None               Nov=-0.08m             Dec=-0.18m            
+  Row 425: Near Prime Medium                                       Oct=None               Nov=-0.16m             Dec=-0.32m            
+  Row 426: Prime                                                   Oct=None               Nov=0.02m              Dec=0.02m             
+  Row 427: BB Revenue                                              Oct=None               Nov=-1.29m             Dec=-2.02m            
+  Row 428: Total as % of average GBV                               Oct=None               Nov=0.00m              Dec=0.00m             
+  Row 429: Non Prime as % of average GBV                           Oct=None               Nov=-0.0043            Dec=-0.0067           
+  Row 430: Near Prime Small as % of average GBV                    Oct=None               Nov=-0.0006            Dec=-0.0018           
+  Row 431: Near Prime Medium as % of average GBV                   Oct=None               Nov=0.0002             Dec=-0.0005           
+  Row 432: Prime as % of average GBV                               Oct=None               Nov=None               Dec=None              
+  Row 434: Non Prime                                               Oct=None               Nov=1.54m              Dec=1.15m             
+  Row 435: Near Prime Small                                        Oct=None               Nov=0.11m              Dec=-0.03m            
+  Row 436: Near Prime Medium                                       Oct=None               Nov=0.46m              Dec=0.53m             
+  Row 437: Prime                                                   Oct=None               Nov=0.04m              Dec=0.04m             
+  Row 438: BB Gross impairment                                     Oct=None               Nov=2.15m              Dec=1.69m             
+  Row 439: as % of revenue                                         Oct=None               Nov=None               Dec=None              
+  Row 440: Non Prime as % of revenue                               Oct=None               Nov=None               Dec=None              
+  Row 441: Near Prime Small as % of revenue                        Oct=None               Nov=None               Dec=None              
+  Row 442: Near Prime Medium as % of revenue                       Oct=None               Nov=None               Dec=None              
+  Row 443: Prime as % of revenue                                   Oct=None               Nov=None               Dec=None              
+  Row 444: as % of average GBV                                     Oct=None               Nov=None               Dec=None              
+  Row 445: Non Prime as % of average GBV                           Oct=None               Nov=0.0115             Dec=0.0071            
+  Row 446: Near Prime Small as % of average GBV                    Oct=None               Nov=0.0021             Dec=-0.0016           
+  Row 447: Near Prime Medium as % of average GBV                   Oct=None               Nov=0.0034             Dec=0.0035            
+  Row 448: Prime as % of average GBV                               Oct=None               Nov=0.0130             Dec=0.0145            
+
+
+========================================================================================================================
+SECTION 8: TOTAL BOOK ACTUALS TREND (Jan-Sep 2025)
+========================================================================================================================
+
+Metric                      2025-01-31   2025-02-28   2025-03-31   2025-04-30   2025-05-31   2025-06-30   2025-07-31   2025-08-31   2025-09-30
+----------------------------------------------------------------------------------------------------------------------------------------------
+ClosingGBV                         N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+AvgGBV                         233.60m      238.46m      240.68m      244.52m      253.12m      257.41m      262.91m      272.29m      276.27m
+Revenue                          5.53m        5.14m        5.69m        5.84m        5.96m        6.10m        6.37m        6.55m        6.51m
+GrossImpairment                 -3.15m       -2.65m       -2.25m       -2.33m       -2.49m       -2.86m       -3.18m       -3.05m       -2.84m
+NetImpairment                      N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+RAM_inclDS                         N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+
+% of Avg GBV                2025-01-31   2025-02-28   2025-03-31   2025-04-30   2025-05-31   2025-06-30   2025-07-31   2025-08-31   2025-09-30
+----------------------------------------------------------------------------------------------------------------------------------------------
+Revenue_%AvgGBV                    N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+GrossImp_%AvgGBV                   N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+NetImp_%AvgGBV                     N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+RAM_inclDS_%AvgGBV                 N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A          N/A
+
+
+========================================================================================================================
+SECTION 9: ACTUALS BY SEGMENT (checking rows 283-300)
+========================================================================================================================
+  Row 280: Revenue                                            Jan=£5.53m          May=£5.96m          Sep=£6.51m         
+  Row 281: Total as % of average GBV                          Jan=None            May=None            Sep=None           
+  Row 282: Non Prime as % of average GBV                      Jan=3.30%           May=3.27%           Sep=3.31%          
+  Row 283: Near Prime Small as % of average GBV               Jan=1.93%           May=1.91%           Sep=1.90%          
+  Row 284: Near Prime Medium as % of average GBV              Jan=1.61%           May=1.61%           Sep=1.57%          
+  Row 285: Prime as % of average GBV                          Jan=0.10%           May=0.08%           Sep=0.08%          
+  Row 287: Non Prime                                          Jan=£-1.91m         May=£-1.51m         Sep=£-1.66m        
+  Row 288: Near Prime Small                                   Jan=£-0.41m         May=£-0.30m         Sep=£-0.27m        
+  Row 289: Near Prime Medium                                  Jan=£-0.82m         May=£-0.65m         Sep=£-0.90m        
+  Row 290: Prime                                              Jan=£-0.01m         May=£-0.03m         Sep=£-0.02m        
+  Row 291: Total Gross impairment                             Jan=£-3.15m         May=£-2.49m         Sep=£-2.84m        
+  Row 292: as % of revenue                                    Jan=None            May=None            Sep=None           
+  Row 293: Non Prime as % of revenue                          Jan=None            May=None            Sep=None           
+  Row 294: Near Prime Small as % of revenue                   Jan=None            May=None            Sep=None           
+  Row 295: Near Prime Medium as % of revenue                  Jan=None            May=None            Sep=None           
+  Row 296: Prime as % of revenue                              Jan=None            May=None            Sep=None           
+  Row 297: as % of average GBV                                Jan=None            May=None            Sep=None           
+  Row 298: Non Prime as % of average GBV                      Jan=-1.86%          May=-1.37%          Sep=-1.38%         
+  Row 299: Near Prime Small as % of average GBV               Jan=-0.94%          May=-0.70%          Sep=-0.64%         
+  Row 300: Near Prime Medium as % of average GBV              Jan=-1.02%          May=-0.68%          Sep=-0.81%         
+  Row 301: Prime as % of average GBV                          Jan=-0.18%          May=-0.56%          Sep=-0.57%         
+  Row 303: Non Prime                                          Jan=None            May=None            Sep=None           
+  Row 304: Near Prime Small                                   Jan=None            May=None            Sep=None           
+  Row 305: Near Prime Medium                                  Jan=None            May=None            Sep=None           
+  Row 306: Prime                                              Jan=None            May=None            Sep=None           
+  Row 307:  RAM (excl. debt sale gain)                        Jan=None            May=None            Sep=None           
+  Row 308: as % of revenue                                    Jan=None            May=None            Sep=None           
+  Row 309: Non Prime as % of revenue                          Jan=None            May=None            Sep=None           
+  Row 310: Near Prime Small as % of revenue                   Jan=None            May=None            Sep=None           
+  Row 311: Near Prime Medium as % of revenue                  Jan=None            May=None            Sep=None           
+  Row 312: Prime as % of revenue                              Jan=None            May=None            Sep=None           
+  Row 313: as % of average GBV                                Jan=None            May=None            Sep=None           
+  Row 314: Non Prime as % of average GBV                      Jan=None            May=None            Sep=None           
+  Row 315: Near Prime Small as % of average GBV               Jan=None            May=None            Sep=None           
+  Row 316: Near Prime Medium as % of average GBV              Jan=None            May=None            Sep=None           
+  Row 317: Prime as % of average GBV                          Jan=None            May=None            Sep=None           
+  Row 319: Non Prime                                          Jan=None            May=None            Sep=None           
+  Row 320: Near Prime Small                                   Jan=None            May=None            Sep=None           
+  Row 321: Near Prime Medium                                  Jan=None            May=None            Sep=None           
+  Row 322: Prime                                              Jan=None            May=None            Sep=None           
+  Row 323: Debt Sale Gain                                     Jan=None            May=None            Sep=None           
+  Row 324: as % gross impairment                              Jan=None            May=None            Sep=None           
+  Row 325: Non Prime as % gross impairment                    Jan=None            May=None            Sep=None           
+  Row 326: Near Prime Small as % gross impairment             Jan=None            May=None            Sep=None           
+  Row 327: Near Prime Medium as % gross impairment            Jan=None            May=None            Sep=None           
+  Row 328: Prime as % impairment                              Jan=None            May=None            Sep=None           
+  Row 329: as % of average GBV                                Jan=None            May=None            Sep=None           
+  Row 330: Non Prime as % of average GBV                      Jan=None            May=None            Sep=None           
+  Row 331: Near Prime Small as % of average GBV               Jan=None            May=None            Sep=None           
+  Row 332: Near Prime Medium as % of average GBV              Jan=None            May=None            Sep=None           
+  Row 333: Prime as % of average GBV                          Jan=None            May=None            Sep=None           
+  Row 335: Non Prime                                          Jan=None            May=None            Sep=None           
+  Row 336: Near Prime Small                                   Jan=None            May=None            Sep=None           
+  Row 337: Near Prime Medium                                  Jan=None            May=None            Sep=None           
+  Row 338: Prime                                              Jan=None            May=None            Sep=None           
+  Row 339:  Net impairment                                    Jan=None            May=None            Sep=None           
+  Row 340: as % gross impairment                              Jan=None            May=None            Sep=None           
+  Row 341: Non Prime as % impairment                          Jan=None            May=None            Sep=None           
+  Row 342: Near Prime Small as % impairment                   Jan=None            May=None            Sep=None           
+  Row 343: Near Prime Medium as % impairment                  Jan=None            May=None            Sep=None           
+  Row 344: Prime as % impairment                              Jan=None            May=None            Sep=None           
+  Row 345: as % of average GBV                                Jan=None            May=None            Sep=None           
+  Row 346: Non Prime as % of average GBV                      Jan=None            May=None            Sep=None           
+  Row 347: Near Prime Small as % of average GBV               Jan=None            May=None            Sep=None           
+  Row 348: Near Prime Medium as % of average GBV              Jan=None            May=None            Sep=None           
+  Row 349: Prime as % of average GBV                          Jan=None            May=None            Sep=None           
+
+
+========================================================================================================================
+SECTION 10: BB FORECAST SUMMARY SECTION (rows 49-193) - Key % Metrics
+========================================================================================================================
+  Row 49: FORECAST (BB Only)>>>                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 51: Non Prime                                               Oct=£-10.41m        Nov=£-9.92m         Dec=£-9.37m         Jan=£-8.72m        
+  Row 52: Near Prime Small                                        Oct=£-2.49m         Nov=£-2.46m         Dec=£-2.37m         Jan=£-2.27m        
+  Row 53: Near Prime Medium                                       Oct=£-5.25m         Nov=£-5.14m         Dec=£-5.01m         Jan=£-4.90m        
+  Row 54: Prime                                                   Oct=£-0.39m         Nov=£-0.40m         Dec=£-0.39m         Jan=£-0.34m        
+  Row 55: BB coll + principal collections                         Oct=£-18.55m        Nov=£-17.92m        Dec=£-17.14m        Jan=£-16.23m       
+  Row 56: as % of average closing GBV                             Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 57: Non Prime as % of average closing GBV                   Oct=-9.41%          Nov=-9.25%          Dec=-9.39%          Jan=-9.41%         
+  Row 58: Near Prime Small as % of average closing GBV            Oct=-6.04%          Nov=-6.09%          Dec=-6.13%          Jan=-6.15%         
+  Row 59: Near Prime Medium as % of average closing GBV           Oct=-4.86%          Nov=-4.83%          Dec=-4.88%          Jan=-4.95%         
+  Row 60: Prime as % of average closing GBV                       Oct=-11.91%         Nov=-13.04%         Dec=-14.32%         Jan=-14.18%        
+  Row 62: Non Prime                                               Oct=£110.68m        Nov=£103.79m        Dec=£95.84m         Jan=£89.57m        
+  Row 63: Near Prime Small                                        Oct=£41.30m         Nov=£39.57m         Dec=£37.67m         Jan=£36.06m        
+  Row 64: Near Prime Medium                                       Oct=£108.11m        Nov=£104.64m        Dec=£100.74m        Jan=£97.37m        
+  Row 65: Prime                                                   Oct=£3.28m          Nov=£2.90m          Dec=£2.54m          Jan=£2.22m         
+  Row 66: BB Closing GBV                                          Oct=£263.36m        Nov=£250.90m        Dec=£236.79m        Jan=£225.22m       
+  Row 67: Non Prime Mix                                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 68: Near Prime Small Mix                                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 69: Near Prime Medium Mix                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 70: Prime Mix                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 72: Non Prime                                               Oct=£110.68m        Nov=£107.23m        Dec=£99.82m         Jan=£92.70m        
+  Row 73: Near Prime Small                                        Oct=£41.30m         Nov=£40.43m         Dec=£38.62m         Jan=£36.87m        
+  Row 74: Near Prime Medium                                       Oct=£108.11m        Nov=£106.37m        Dec=£102.69m        Jan=£99.05m        
+  Row 75: Prime                                                   Oct=£3.28m          Nov=£3.09m          Dec=£2.72m          Jan=£2.38m         
+  Row 76: BB Average GBV                                          Oct=£263.36m        Nov=£257.13m        Dec=£243.84m        Jan=£231.00m       
+  Row 77: Non Prime Mix                                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 78: Near Prime Small Mix                                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 79: Near Prime Medium Mix                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 80: Prime Mix                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 82: Non Prime                                               Oct=£93.90m         Nov=£86.45m         Dec=£78.53m         Jan=£71.97m        
+  Row 83: Near Prime Small                                        Oct=£37.56m         Nov=£35.60m         Dec=£33.56m         Jan=£31.81m        
+  Row 84: Near Prime Medium                                       Oct=£100.69m        Nov=£96.62m         Dec=£92.42m         Jan=£88.71m        
+  Row 85: Prime                                                   Oct=£2.68m          Nov=£2.33m          Dec=£1.99m          Jan=£1.71m         
+  Row 86: BB Closing NBV                                          Oct=£234.83m        Nov=£221.00m        Dec=£206.51m        Jan=£194.21m       
+  Row 87: Non Prime Mix                                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 88: Near Prime Small Mix                                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 89: Near Prime Medium Mix                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 90: Prime Mix                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 92: Non Prime                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 93: Near Prime Small                                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 94: Near Prime Medium                                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 95: Prime                                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 96: BB Average NBV                                          Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 97: Non Prime Mix                                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 98: Near Prime Small Mix                                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 99: Near Prime Medium Mix                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 100: Prime Mix                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 102: Non Prime                                               Oct=£3.46m          Nov=£3.09m          Dec=£2.80m          Jan=£2.51m         
+  Row 103: Near Prime Small                                        Oct=£0.78m          Nov=£0.74m          Dec=£0.70m          Jan=£0.66m         
+  Row 104: Near Prime Medium                                       Oct=£1.73m          Nov=£1.66m          Dec=£1.60m          Jan=£1.53m         
+  Row 105: Prime                                                   Oct=£0.03m          Nov=£0.03m          Dec=£0.02m          Jan=£0.02m         
+  Row 106: BB Revenue                                              Oct=£6.00m          Nov=£5.52m          Dec=£5.12m          Jan=£4.72m         
+  Row 107: Total as % of average GBV                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 108: Non Prime as % of average GBV                           Oct=3.13%           Nov=2.89%           Dec=2.81%           Jan=2.71%          
+  Row 109: Near Prime Small as % of average GBV                    Oct=1.88%           Nov=1.82%           Dec=1.80%           Jan=1.78%          
+  Row 110: Near Prime Medium as % of average GBV                   Oct=1.60%           Nov=1.56%           Dec=1.56%           Jan=1.55%          
+  Row 111: Prime as % of average GBV                               Oct=0.78%           Nov=0.81%           Dec=0.92%           Jan=0.99%          
+  Row 113: Non Prime                                               Oct=£-0.72m         Nov=£-0.57m         Dec=£-1.01m         Jan=£-0.30m        
+  Row 114: Near Prime Small                                        Oct=£-0.31m         Nov=£-0.24m         Dec=£-0.32m         Jan=£-0.14m        
+  Row 115: Near Prime Medium                                       Oct=£-0.89m         Nov=£-0.59m         Dec=£-0.69m         Jan=£-0.34m        
+  Row 116: Prime                                                   Oct=£0.01m          Nov=£0.02m          Dec=£0.03m          Jan=£0.03m         
+  Row 117: BB Gross impairment                                     Oct=£-1.91m         Nov=£-1.38m         Dec=£-1.98m         Jan=£-0.75m        
+  Row 118: as % of revenue                                         Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 119: Non Prime as % of revenue                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 120: Near Prime Small as % of revenue                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 121: Near Prime Medium as % of revenue                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 122: Prime as % of revenue                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 123: as % of average GBV                                     Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 124: Non Prime as % of average GBV                           Oct=-0.65%          Nov=-0.53%          Dec=-1.01%          Jan=-0.33%         
+  Row 125: Near Prime Small as % of average GBV                    Oct=-0.75%          Nov=-0.58%          Dec=-0.83%          Jan=-0.37%         
+  Row 126: Near Prime Medium as % of average GBV                   Oct=-0.82%          Nov=-0.56%          Dec=-0.67%          Jan=-0.34%         
+  Row 127: Prime as % of average GBV                               Oct=0.17%           Nov=0.70%           Dec=1.17%           Jan=1.34%          
+  Row 129: Non Prime                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 130: Near Prime Small                                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 131: Near Prime Medium                                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 132: Prime                                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 133: BB RAM (excl. debt sale gain)                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 134: as % of revenue                                         Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 135: Non Prime as % of revenue                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 136: Near Prime Small as % of revenue                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 137: Near Prime Medium as % of revenue                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 138: Prime as % of revenue                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 139: as % of average GBV                                     Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 140: Non Prime as % of average GBV                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 141: Near Prime Small as % of average GBV                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 142: Near Prime Medium as % of average GBV                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 143: Prime as % of average GBV                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 145: Non Prime                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 146: Near Prime Small                                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 147: Near Prime Medium                                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 148: Prime                                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 149: BB Debt Sale Gain                                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 150: as % gross impairment                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 151: Non Prime as % gross impairment                         Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 152: Near Prime Small as % gross impairment                  Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 153: Near Prime Medium as % gross impairment                 Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 154: Prime as % impairment                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 155: as % of average GBV                                     Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 156: Non Prime as % of average GBV                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 157: Near Prime Small as % of average GBV                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 158: Near Prime Medium as % of average GBV                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 159: Prime as % of average GBV                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 161: Non Prime                                               Oct=£-0.72m         Nov=£-0.57m         Dec=£-0.98m         Jan=£-0.30m        
+  Row 162: Near Prime Small                                        Oct=£-0.31m         Nov=£-0.24m         Dec=£-0.31m         Jan=£-0.14m        
+  Row 163: Near Prime Medium                                       Oct=£-0.89m         Nov=£-0.59m         Dec=£-0.67m         Jan=£-0.34m        
+  Row 164: Prime                                                   Oct=£0.01m          Nov=£0.02m          Dec=£0.03m          Jan=£0.03m         
+  Row 165: BB Net impairment                                       Oct=£-1.91m         Nov=£-1.38m         Dec=£-1.93m         Jan=£-0.75m        
+  Row 166: as % gross impairment                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 167: Non Prime as % impairment                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 168: Near Prime Small as % impairment                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 169: Near Prime Medium as % impairment                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 170: Prime as % impairment                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 171: as % of average GBV                                     Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 172: Non Prime as % of average GBV                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 173: Near Prime Small as % of average GBV                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 174: Near Prime Medium as % of average GBV                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 175: Prime as % of average GBV                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 177: Non Prime                                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 178: Near Prime Small                                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 179: Near Prime Medium                                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 180: Prime                                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 181: BB RAM (incl. debt sale gain)                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 182: as % of revenue                                         Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 183: Non Prime as % of revenue                               Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 184: Near Prime Small as % of revenue                        Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 185: Near Prime Medium as % of revenue                       Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 186: Prime as % of revenue                                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 187: as % of average GBV                                     Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 188: Non Prime as % of average GBV                           Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 189: Near Prime Small as % of average GBV                    Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 190: Near Prime Medium as % of average GBV                   Oct=None            Nov=None            Dec=None            Jan=None           
+  Row 191: Prime as % of average GBV                               Oct=None            Nov=None            Dec=None            Jan=None           
+
+
+Analysis complete.
