@@ -95,13 +95,11 @@ class Config:
     ENABLE_CR_GROWTH_CAP: bool = True  # Enabled with scale factor to prevent October spike
     MAX_CR_GROWTH_PER_MONTH: float = 0.030  # Max +3pp per month to compensate for faster GBV decline
 
-    # CR Scale Factor - multiplies all coverage ratios to boost provision
-    # Model collections are £13m higher than budget, causing faster GBV decline
-    # This factor compensates by boosting CR to maintain provision levels
-    CR_SCALE_FACTOR: float = 1.85  # Boost CR by 85% to compensate for faster GBV decline
+    # CR Scale Factor - removed (now 1.0). CR trajectory driven purely by Rate_Methodology approaches
+    CR_SCALE_FACTOR: float = 1.0
 
     # Overlay configuration
-    ENABLE_OVERLAYS: bool = True  # Enabled to apply monthly impairment adjustments for MOM matching
+    ENABLE_OVERLAYS: bool = False  # Disabled - using methodology-only approach
     OVERLAY_FILE: str = 'Overlays.csv'  # Path to overlay configuration file
 
 
