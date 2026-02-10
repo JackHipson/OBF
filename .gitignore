@@ -42,3 +42,6 @@ output_coll_restored/
 # Backup files
 Rate_Methodology_backup.csv
 Rate_Methodology_original_coll.csv
+
+# Reference files from other branches
+Forecast_v3.6.xlsx
