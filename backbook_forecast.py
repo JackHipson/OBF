@@ -101,7 +101,7 @@ class Config:
     CR_SCALE_FACTOR: float = 1.85  # Boost CR by 85% to compensate for faster GBV decline
 
     # Overlay configuration
-    ENABLE_OVERLAYS: bool = False  # Disabled - fix methodology first before applying overlays
+    ENABLE_OVERLAYS: bool = True  # Enabled to apply monthly impairment adjustments for MOM matching
     OVERLAY_FILE: str = 'Overlays.csv'  # Path to overlay configuration file
 
 

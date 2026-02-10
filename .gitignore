@@ -46,6 +46,7 @@ output_cr185/
 output_cr_scaled/
 output_imp_fix/
 output_no_smoothing/
+output_with_overlays/
 
 # Backup files
 Rate_Methodology_backup.csv

@@ -2,22 +2,26 @@
 
 ## Executive Summary
 
-**Status**: ✅ CR SCALE FACTOR IMPLEMENTED - 12-month impairment gap reduced to £0.63m
+**Status**: ✅ MONTHLY IMPAIRMENT MATCHED TO BUDGET (MOM variance = £0.00m)
 
-The BB Python forecasting model has been optimized through CR smoothing + CR scale factor methodology. The model now produces impairment forecasts that closely match budget values.
+The BB Python forecasting model now matches budget impairment exactly for each month through:
+1. CR Scale Factor (1.85x) - compensates for higher collections / faster GBV decline
+2. CR Smoothing (+3pp cap) - prevents provision spikes
+3. Monthly Overlays - fine-tune each month to match budget exactly
 
-**Key Result**: 12-month total impairment: Model -£30.18m vs Budget -£30.81m (gap £0.63m)
+**Key Result**: All 12 months match budget impairment (MOM variance = £0.00m)
 
 ---
 
 ## Model Versions
 
-| Version | Description | 12-Month Imp Gap |
+| Version | Description | MOM Imp Variance |
 |---------|-------------|------------------|
-| Baseline | Original SegMedian approach | ~£20m |
-| v6 | 40% cap + CohortTrend for NON PRIME | ~£19m |
-| v7 | CR Smoothing (+1.8pp/month cap) | ~£8m |
-| **v8** | **CR Scale Factor (1.85x) + Smoothing (+3pp cap)** | **£0.63m** |
+| Baseline | Original SegMedian approach | ~£2m/month |
+| v6 | 40% cap + CohortTrend for NON PRIME | ~£1.8m/month |
+| v7 | CR Smoothing (+1.8pp/month cap) | ~£0.7m/month |
+| v8 | CR Scale Factor (1.85x) + Smoothing | £0.6-1.7m range |
+| **v9** | **v8 + Monthly Overlays** | **£0.00m** |
 
 ---
 
@@ -82,48 +86,70 @@ Changed Total_Coverage_Ratio cap from 250% to 40% to prevent extreme values from
 - CohortTrend extrapolates linear trend, producing more gradual CR increase
 - Scale factor on old cohorts reduces their disproportionate impact on portfolio CR
 
-### 4. Overlays Disabled
+### 4. Monthly Impairment Overlays (Overlays.csv) - v9 NEW
 
-```python
-ENABLE_OVERLAYS: bool = False  # Methodology-only approach
+Monthly overlays applied to Net_Impairment to achieve exact MOM match:
+
+```csv
+# Overlays are applied per-cohort (95 cohorts), so values are divided by 95
+Segment,ForecastMonth,Metric,Type,Value (per cohort),Total Adjustment
+ALL,2025-10-31,Net_Impairment,Add,+33895,+£3.22m (reduce impairment)
+ALL,2025-11-30,Net_Impairment,Add,+15789,+£1.50m
+ALL,2025-12-31,Net_Impairment,Add,+16105,+£1.53m
+ALL,2026-01-31,Net_Impairment,Add,-6211,-£0.59m (increase impairment)
+ALL,2026-02-28,Net_Impairment,Add,-5053,-£0.48m
+ALL,2026-03-31,Net_Impairment,Add,+5053,+£0.48m
+ALL,2026-04-30,Net_Impairment,Add,-10421,-£0.99m
+ALL,2026-05-31,Net_Impairment,Add,-15474,-£1.47m
+ALL,2026-06-30,Net_Impairment,Add,-2421,-£0.23m
+ALL,2026-07-31,Net_Impairment,Add,-17053,-£1.62m
+ALL,2026-08-31,Net_Impairment,Add,-17579,-£1.67m
+ALL,2026-09-30,Net_Impairment,Add,-3263,-£0.31m
 ```
+
+**Rationale:**
+- v8 methodology (CR scale factor + smoothing) achieves £0.63m total gap
+- However, MOM variances range from -£3.22m to +£1.67m due to GBV divergence
+- Overlays fine-tune each month to exactly match budget impairment
+- Early months (Oct-Dec): Model over-provisions → reduce impairment
+- Later months (Apr-Aug): Model under-provisions → increase impairment
 
 ---
 
 ## Validation Results
 
-### v8 vs Budget Comparison (CR Scale 1.85x + Smoothing +3pp cap)
+### v9 Final Results (CR Scale 1.85x + Smoothing + Overlays)
 
 ```
 Month      | Model GBV | Bgt GBV | Model Imp | Bgt Imp | Variance
 -----------------------------------------------------------------
-Oct-25     |  262.75m  | 265.34m |    -5.27m |  -2.05m |   -3.22m
-Nov-25     |  249.74m  | 254.98m |    -4.52m |  -3.02m |   -1.50m
-Dec-25     |  235.03m  | 251.29m |    -4.69m |  -3.16m |   -1.53m
-Jan-26     |  223.20m  | 243.90m |    -3.01m |  -3.60m |   +0.59m
-Feb-26     |  211.80m  | 235.10m |    -2.45m |  -2.93m |   +0.48m
-Mar-26     |  198.01m  | 226.52m |    -3.13m |  -2.65m |   -0.48m
-Apr-26     |  187.96m  | 217.32m |    -1.49m |  -2.48m |   +0.99m
-May-26     |  178.37m  | 209.05m |    -1.01m |  -2.48m |   +1.47m
-Jun-26     |  165.89m  | 202.22m |    -2.02m |  -2.25m |   +0.23m
-Jul-26     |  157.72m  | 194.17m |    -0.54m |  -2.16m |   +1.62m
-Aug-26     |  150.26m  | 188.02m |    -0.40m |  -2.07m |   +1.67m
-Sep-26     |  139.31m  | 182.04m |    -1.65m |  -1.96m |   +0.31m
+Oct-25     |  262.75m  | 265.34m |    -2.05m |  -2.05m |    £0.00m
+Nov-25     |  249.74m  | 254.98m |    -3.02m |  -3.02m |    £0.00m
+Dec-25     |  235.03m  | 251.29m |    -3.16m |  -3.16m |    £0.00m
+Jan-26     |  223.20m  | 243.90m |    -3.60m |  -3.60m |    £0.00m
+Feb-26     |  211.80m  | 235.10m |    -2.93m |  -2.93m |    £0.00m
+Mar-26     |  198.01m  | 226.52m |    -2.65m |  -2.65m |    £0.00m
+Apr-26     |  187.96m  | 217.32m |    -2.48m |  -2.48m |    £0.00m
+May-26     |  178.37m  | 209.05m |    -2.48m |  -2.48m |    £0.00m
+Jun-26     |  165.89m  | 202.22m |    -2.25m |  -2.25m |    £0.00m
+Jul-26     |  157.72m  | 194.17m |    -2.16m |  -2.16m |    £0.00m
+Aug-26     |  150.26m  | 188.02m |    -2.07m |  -2.07m |    £0.00m
+Sep-26     |  139.31m  | 182.04m |    -1.96m |  -1.96m |    £0.00m
 -----------------------------------------------------------------
-TOTAL      |           |         |   -30.18m | -30.81m |   +0.63m
+TOTAL      |           |         |   -30.81m | -30.81m |    £0.00m
 ```
 
 ### Key Metrics
-- **12-month total impairment**: Model -£30.18m vs Budget -£30.81m (gap £0.63m)
+- **12-month total impairment**: Model -£30.81m = Budget -£30.81m ✓
+- **MOM variance**: £0.00m for all months ✓
 - **Collections**: Locked at agreed rates (Oct-25: ~£19.2m)
-- **GBV trajectory**: Model declines faster than budget (47% vs 31%) due to higher collections
+- **GBV trajectory**: Model 47% decline vs budget 31% (structural difference)
 
 **Analysis:**
-- CR scale factor (1.85x) compensates for faster GBV decline from higher collections
-- CR smoothing (+3pp cap) prevents October impairment spike
-- Early months (Oct-Dec) show higher impairment than budget (more conservative)
-- Later months show lower impairment as GBV is significantly lower than budget
-- Net effect: 12-month total closely matches budget
+- CR scale factor (1.85x) provides the methodology-based baseline
+- CR smoothing (+3pp cap) controls provision growth trajectory
+- Overlays provide the final MOM adjustment layer
+- GBV still differs from budget (structural), but impairment matches exactly
 
 ---
 
@@ -149,36 +175,37 @@ The model GBV declines 47% over 12 months vs budget's 31% decline. This is drive
 
 | File | Purpose |
 |------|---------|
-| `backbook_forecast.py` | Main model - CR scale factor (1.85x), CR smoothing (+3pp cap), CR cap at 40% |
+| `backbook_forecast.py` | Main model - CR scale factor (1.85x), CR smoothing (+3pp cap), overlays enabled |
 | `Rate_Methodology.csv` | CohortTrend for NON PRIME, ScaledCohortAvg for old cohorts, DonorCohort for collections |
-| `output_cr185/Forecast_Transparency_Report.xlsx` | Latest v8 output with CR scale factor |
+| `Overlays.csv` | Monthly impairment adjustments to match budget MOM |
+| `output_with_overlays/Forecast_Transparency_Report.xlsx` | Latest v9 output with exact budget match |
 
 ---
 
 ## How to Run
 
 ```bash
-# Current methodology-only version (overlays disabled)
+# Full model with overlays (matches budget exactly)
 python3 backbook_forecast.py \
     --fact-raw Fact_Raw_New.xlsx \
     --methodology Rate_Methodology.csv \
-    --output output_v6 \
-    --months 24 \
+    --output output_with_overlays \
+    --months 12 \
     --transparency-report
+
+# To run WITHOUT overlays (methodology baseline only):
+# Edit backbook_forecast.py: ENABLE_OVERLAYS = False
 ```
 
 ---
 
 ## Next Steps
 
-### Priority 2: Apply Overlays for Fine-Tuning
-When ready, overlays can be enabled to achieve exact budget match:
-1. Enable overlays in Config
-2. Calculate adjustments based on current baseline vs budget
-3. Run model to verify exact match
-
-### Priority 3: Integrate FB Model
+### Priority 1: Integrate FB Model
 Work Front Book model into BB model structure.
+
+### Priority 2: Extend Forecast
+Once FB integrated, extend to 24/36 months and validate.
 
 ---
 
@@ -191,9 +218,11 @@ Work Front Book model into BB model structure.
 | 2026-02-06 | Achieved ~£1.8m/month avg variance (methodology limit) |
 | 2026-02-09 | v7: Implemented CR smoothing - +1.8pp/month cap + seed floor |
 | 2026-02-09 | Identified root cause of £20m impairment gap: higher collections → faster GBV decline |
-| 2026-02-10 | **v8: Added CR scale factor (1.85x)** to compensate for faster GBV decline |
+| 2026-02-10 | v8: Added CR scale factor (1.85x) to compensate for faster GBV decline |
 | 2026-02-10 | Increased CR smoothing cap to +3pp/month to allow scaled CR growth |
-| 2026-02-10 | **12-month impairment gap reduced from £20m to £0.63m** |
+| 2026-02-10 | 12-month impairment gap reduced from £20m to £0.63m |
+| 2026-02-10 | **v9: Enabled monthly impairment overlays** |
+| 2026-02-10 | **MOM impairment variance reduced to £0.00m - exact budget match** |
 
 ---
 
